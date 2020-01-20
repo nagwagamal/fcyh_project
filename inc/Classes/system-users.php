@@ -47,9 +47,17 @@ class systemUsers
 				$sitecountry = $GLOBALS['db']->fetchitem($query);
 				return array(
 					"id"				    => 		$sitecountry['id'],
-					"count_name"	    => 		$sitecountry['count_name'],
-					"count_name_ar"	    => 		$sitecountry['count_name_ar'],
-					"status"			    => 		$sitecountry['status']
+					"name"	    => 		$sitecountry['name'],
+					"email"	    => 		$sitecountry['email'],
+					"email_key"	    => 		$sitecountry['email_key'],
+					"email_verified"	    => 		$sitecountry['email_verified'],
+					"mobile"	    => 		$sitecountry['mobile'],
+					"mobile_key"	    => 		$sitecountry['mobile_key'],
+					"mobile_verified"	    => 		$sitecountry['mobile_verified'],
+					"city_id"	    => 		$sitecountry['city_id'],
+					"lon"	    => 		$sitecountry['lon'],
+					"lat"	    => 		$sitecountry['lat'],
+					"type"			    => 		$sitecountry['type']
 				);
 			}else{return null;}
 		}else{$GLOBALS['login']->doDestroy();return false;}
@@ -61,14 +69,23 @@ class systemUsers
 		return 1;
 	}
 	
-	function setUsersInformation($country)
+	function setUsersInformation($user)
 	{
 		
 		$GLOBALS['db']->query("UPDATE LOW_PRIORITY `".$this->tableName."` SET
-			`count_name`  =	'".$country[count_name]."',
-			`count_name_ar`  =	'".$country[count_name_ar]."',
-			`status`		    =	'".$country[status]."'
-			WHERE `id` 		    = 	'".$country[id]."' LIMIT 1 ");
+
+			`name`	    = 		'".$user[name]."',
+					`email`	    = 		'".$user[email]."',
+					`email_key`	    = 		'".$user[email_key]."',
+					`email_verified`	    = 		'".$user[email_verified]."',
+					`mobile`	    = 		'".$user[mobile]."',
+					`mobile_key`	    = 		'".$user[mobile_key]."',
+					`mobile_verified`	    = 		'".$user[mobile_verified]."',
+					`city_id`	    = 		'".$user[city_id]."',
+					`lon`	    = 		'".$user[lon]."',
+					`lat`	    = 		'".$user[lat]."',
+					`type`			    = 		'".$user[type]."'
+			WHERE `id` 		    = 	'".$user[id]."' LIMIT 1 ");
 		return 1;
 	}
 	
@@ -76,7 +93,7 @@ class systemUsers
 	{
 		if($GLOBALS['login']->doCheck() == true)
 		{
-			$query = $GLOBALS['db']->query("SELECT * FROM `".$this->tableName."` WHERE `count_name_ar` = '".$name."'  LIMIT 1 ");
+			$query = $GLOBALS['db']->query("SELECT * FROM `".$this->tableName."` WHERE `name` = '".$name."'  LIMIT 1 ");
 			$queryTotal = $GLOBALS['db']->resultcount();
 			if($queryTotal == 1)
 			{
@@ -90,11 +107,11 @@ class systemUsers
 		}else{$GLOBALS['login']->doDestroy();return false;}
 	}
 	
-	function addNewUsers($country)
+	function addNewUsers($user)
 	{
 		$sql=$GLOBALS['db']->query("INSERT LOW_PRIORITY INTO `".$this->tableName."`
-		(`id`, `count_name`,`count_name_ar`,`status`)VALUES
-		( NULL ,  '".$country[count_name]."' ,'".$country[count_name_ar]."' ,  '1') ");
+		(`id`, `name`,`email`,`email_key`,`email_verified`,`mobile`,`mobile_key`,`mobile_verified`,`city_id`,`lon`,`lat`,`type`)VALUES
+		( NULL ,  '".$user[name]."' ,  '".$user[email]."' ,  '".$user[email_key]."' ,  '".$user[email_verified]."' ,  '".$user[mobile]."' ,  '".$user[mobile_key]."' ,  '".$user[mobile_verified]."' ,  '".$user[city_id]."' ,  '".$user[lon]."' ,'".$user[lat]."' ,'".$user[lat]."' ,  '1') ");
 
 		return 1;
 	}
