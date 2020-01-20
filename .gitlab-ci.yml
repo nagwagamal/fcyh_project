@@ -1,0 +1,18 @@
+build:
+  stage: build
+  script:
+    # Project Initialization
+    - echo 'Creating directory'
+    # - sudo mkdir -p /var/www/html/php7.3/b-sfa
+    - cd /var/www/html/php7.3/b-sfa/
+    - echo 'Creating log files'
+    - sudo touch error.log access.log
+    - echo 'Deleting old data'
+    - sudo rm -rf b-sfa/ || true
+    - sudo git clone git@169.45.148.195:fawzy/sfa.git b-sfa
+    - sudo cp -f b-sfa/inc/config.server.php b-sfa/inc/config.php || true
+    - sudo chmod 777 . -R
+    - sudo docker cp b-sfa/b-sfa.conf php73_apache:/etc/apache2/sites-available/
+    - sudo docker exec php73_apache a2ensite b-sfa
+    - sudo docker exec php73_apache apachectl configtest
+    - sudo docker exec php73_apache service apache2 reload

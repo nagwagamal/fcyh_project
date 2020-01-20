@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /meta -->
+
+    <title>{$site_name} :: {$title}</title>
+    {include file= $headinc}
+</head>
+
+<!-- body -->
+
+<body>
+    <div class="app right-menu">
+        <!-- top header -->
+        <header class="header header-fixed navbar " style="background-color:#178a4e;">
+            {include file= $topmenu}
+        </header>
+        <!-- /top header -->
+
+        <section class="layout">
+
+            {include file= $sidebar}
+            <!-- main content -->
+            <section class="main-content">
+
+                <!-- content wrapper -->
+                <div class="content-wrap">
+
+                    <!-- inner content wrapper -->
+                    <div class="wrapper">
+	            	{if $filename neq ''}
+			            {include file=$filename}
+			        {else}
+			        	no file page to include ( layout.html )
+			        {/if}
+			        </div>
+                    <!-- /inner content wrapper -->
+
+                </div>
+                <!-- /content wrapper -->
+                <a class="exit-offscreen"></a>
+            </section>
+            <!-- /main content -->
+        </section>
+
+    </div>
+    {include file= $footinc}
+</body>
+<!-- /body -->
+
+</html>

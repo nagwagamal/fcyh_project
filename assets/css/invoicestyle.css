@@ -1,0 +1,60 @@
+/* Invoices */
+
+#_wrapper * {
+font-family: Tahoma;
+font-size: 11px;
+color: #000000;
+}
+
+
+#_wrapper {
+width: 600px;
+padding-right:5px;
+}
+
+#invoicetoptables {
+width: 100%;
+background-color: #cccccc;
+border-collapse: seperate;
+}
+
+td#invoicecontent {
+background-color: #ffffff;
+color: #000000;
+}
+
+.unpaid {
+font-size: 13px;
+color: #cc0000;
+font-weight: bold;
+}
+
+.paid {
+font-size: 12px;
+color: #779500;
+font-weight: bold;
+}
+
+.cancelled {
+font-size: 12px;
+color: #cccccc;
+font-weight: bold;
+}
+
+#invoiceitemstable {
+width: 100%;
+background-color: #cccccc;
+border-collapse: seperate;
+}
+
+td#invoiceitemsheading {
+background-color: #efefef;
+color: #000000;
+font-weight: bold;
+text-align: center;
+}
+
+td#invoiceitemsrow {
+background-color: #ffffff;
+color: #000000;
+}
