@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 14:38:26
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 16:26:25
          compiled from "./assets/themes\internal/complains.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7005e26f0c25b9066-81633771%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2055e270a112c15b9-64224391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     'cc1846526a91c8c4c936bebdf0f8a5073c96a949' =>
     array (
       0 => './assets/themes\\internal/complains.tpl',
-      1 => 1579610265,
+      1 => 1579616780,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7005e26f0c25b9066-81633771',
+  'nocache_hash' => '2055e270a112c15b9-64224391',
   'function' =>
   array (
   ),
@@ -74,8 +74,13 @@ if ($_smarty_tpl->_count($_from) > 0){
                                                 <td><a href="complains.html?do=view&id=<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 "><?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 </a></td>
+                                                <td><?php echo getFromTable(array('a'=>$_smarty_tpl->getVariable('c')->value['user_from'],'b'=>"users",'c'=>"getUsersInformation",'d'=>"name"),$_smarty_tpl);?>
+
+													</td>
+<!--
 												<td><?php echo $_smarty_tpl->getVariable('c')->value['user_from'];?>
 </td>
+-->
 												<td><?php echo $_smarty_tpl->getVariable('c')->value['complain'];?>
 </td>
 												<td><?php echo $_smarty_tpl->getVariable('c')->value['date'];?>
@@ -133,12 +138,18 @@ if ($_smarty_tpl->_count($_from) > 0){
  ( # <?php echo $_smarty_tpl->getVariable('u')->value['id'];?>
  )</header>
 						<div class="panel-body">
-							<div class="alert alert-info">
+                            <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> <?php echo $_smarty_tpl->getVariable('lang')->value['from_user'];?>
+ : </strong></span>
+								<span style="width:80%;display:inline-block;"><?php echo getFromTable(array('a'=>$_smarty_tpl->getVariable('u')->value['user_from'],'b'=>"users",'c'=>"getUsersInformation",'d'=>"name"),$_smarty_tpl);?>
+ </span>
+							</div>
+							<!--<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['user_from'];?>
  : </strong></span>
 								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['user_from'];?>
  </span>
-							</div>
+							</div>-->
                             <div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['complain'];?>
  : </strong></span>

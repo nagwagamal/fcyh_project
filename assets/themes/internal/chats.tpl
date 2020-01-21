@@ -35,8 +35,16 @@
 										{foreach from=$u item="c"}
 											<tr id="tr_{$c.id}">
                                                 <td><a href="chats.html?do=view&id={$c.id}">{$c.id}</a></td>
+                                                <td>{getFromTable a=$c.from_user b="users" c="getUsersInformation" d="name"}
+													</td>
+                                                <td>{getFromTable a=$c.to_user b="users" c="getUsersInformation" d="name"}
+													</td>
+<!--
 												<td>{$c.from_user}</td>
+-->
+<!--
 												<td>{$c.to_user}</td>
+-->
 												<td>{$c.message}</td>
 												<td>{$c.time}</td>
 
@@ -79,14 +87,23 @@
 					<section class="panel">
 						<header class="panel-heading"> {$lang.chats_details} ( # {$u.id} )</header>
 						<div class="panel-body">
-							<div class="alert alert-info">
+                             <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.from_user} : </strong></span>
+								<span style="width:80%;display:inline-block;">{getFromTable a=$u.from_user b="users"  c="getUsersInformation" d="name"} </span>
+							</div>
+                            <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.to_user} : </strong></span>
+								<span style="width:80%;display:inline-block;">{getFromTable a=$u.to_user b="users"  c="getUsersInformation" d="name"} </span>
+							</div>
+
+							<!--<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.from_user} : </strong></span>
 								<span style="width:80%;display:inline-block;">{$u.from_user} </span>
 							</div>
                             <div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.to_user} : </strong></span>
 								<span style="width:80%;display:inline-block;">{$u.to_user} </span>
-							</div>
+							</div>-->
                             <div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.message} : </strong></span>
 								<span style="width:80%;display:inline-block;">{$u.message} </span>

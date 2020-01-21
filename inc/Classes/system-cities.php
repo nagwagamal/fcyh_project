@@ -72,7 +72,7 @@ class systemCities
 	{
 		
 		$GLOBALS['db']->query("UPDATE LOW_PRIORITY `".$this->tableName."` SET
-			`gov_id`			=	'".$city[gov_id]."',
+			`gov_id`			=	'".$city[governorate]."',
 			`city_name_ar`		    =	'".$city[city_name_ar]."',
 			`city_name`		    =	'".$city[city_name]."',
 			`status`		    =	'".$city[status]."'

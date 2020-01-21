@@ -191,7 +191,7 @@
 	        			$_city['id'] 				    = 	$mId;
 	        			$_city['city_name'] 		        = 	sanitize($_POST["city_name"]);
 	        			$_city['city_name_ar'] 		        = 	sanitize($_POST["city_name_ar"]);
-	        			$_city['gov_id'] 			    = 	intval($_POST["gov_id"]);
+	        			$_city['gov_id'] 			    = 	intval($_POST["governorate"]);
         				$_city['status'] 			    = 	intval($_POST["status"]);
 
 

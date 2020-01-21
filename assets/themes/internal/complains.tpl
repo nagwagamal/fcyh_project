@@ -34,7 +34,11 @@
 										{foreach from=$u item="c"}
 											<tr id="tr_{$c.id}">
                                                 <td><a href="complains.html?do=view&id={$c.id}">{$c.id}</a></td>
+                                                <td>{getFromTable a=$c.user_from b="users" c="getUsersInformation" d="name"}
+													</td>
+<!--
 												<td>{$c.user_from}</td>
+-->
 												<td>{$c.complain}</td>
 												<td>{$c.date}</td>
 											</tr>
@@ -76,10 +80,14 @@
 					<section class="panel">
 						<header class="panel-heading"> {$lang.complains_details} ( # {$u.id} )</header>
 						<div class="panel-body">
-							<div class="alert alert-info">
+                            <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.from_user} : </strong></span>
+								<span style="width:80%;display:inline-block;">{getFromTable a=$u.user_from b="users"  c="getUsersInformation" d="name"} </span>
+							</div>
+							<!--<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.user_from} : </strong></span>
 								<span style="width:80%;display:inline-block;">{$u.user_from} </span>
-							</div>
+							</div>-->
                             <div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.complain} : </strong></span>
 								<span style="width:80%;display:inline-block;">{$u.complain} </span>

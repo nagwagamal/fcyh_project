@@ -135,7 +135,7 @@
 								<div class="col-sm-10">
 									<select class="form-control" name="country">
 										{foreach from=$c item="_c"}
-											<option value="{$_c.id}"{if $n}{if $_c.id eq $n.country}selected="selected"{/if}{else} {if $_c.id eq $u.country}selected="selected"{/if}{/if}>{$_c.count_name_ar} - {$_c.count_name} </option>
+											<option value="{$_c.id}"{if $n}{if $_c.id eq $n.country}selected="selected"{/if}{else} {if $_c.id eq $u.count_id}selected="selected"{/if}{/if}>{$_c.count_name_ar} - {$_c.count_name} </option>
 										{/foreach}
 									</select>
 								</div>
@@ -195,7 +195,7 @@
 							</div>
                          <div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.country} : </strong></span>
-								<span style="width:80%;display:inline-block;">{getFromTable a=$u.country b="country" c="getCountryInformation" d="count_name_ar"} - {getFromTable a=$u.country b="country" c="getCountryInformation" d="count_name"}</span>
+								<span style="width:80%;display:inline-block;">{getFromTable a=$u.count_id b="country" c="getCountryInformation" d="count_name_ar"} - {getFromTable a=$u.count_id b="country" c="getCountryInformation" d="count_name"}</span>
 							</div>
                             
 							<div class="alert alert-info">

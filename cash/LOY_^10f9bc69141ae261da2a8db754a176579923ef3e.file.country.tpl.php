@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-20 10:04:57
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 15:08:40
          compiled from "./assets/themes\internal/country.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:194785e255f2918e918-68032189%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:256215e26f7d86464b5-55830539%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10f9bc69141ae261da2a8db754a176579923ef3e' => 
     array (
       0 => './assets/themes\\internal/country.tpl',
-      1 => 1579507490,
+      1 => 1579612039,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '194785e255f2918e918-68032189',
+  'nocache_hash' => '256215e26f7d86464b5-55830539',
   'function' => 
   array (
   ),
@@ -116,22 +116,13 @@ if ($_smarty_tpl->_count($_from) > 0){
 											<?php if ($_smarty_tpl->getVariable('group')->value['governorates_add']==1){?>
 												<td colspan="3" align="right"><?php echo $_smarty_tpl->getVariable('pager')->value;?>
 </td>
-												<td colspan="1" align="left"><a class="btn btn-success btn-sm pull-left" href="governorates.html?do=add"><?php echo $_smarty_tpl->getVariable('lang')->value['add_governorate'];?>
+												<td colspan="1" align="left"><a class="btn btn-success btn-sm pull-left" href="country.html?do=add"><?php echo $_smarty_tpl->getVariable('lang')->value['add_country'];?>
 </a></td>
 											<?php }else{ ?>
 												<td colspan="4" align="right"><?php echo $_smarty_tpl->getVariable('pager')->value;?>
 </td>
 											<?php }?>
-										<?php }else{ ?>
-											<?php if ($_smarty_tpl->getVariable('group')->value['governorates_add']==1){?>
-												<td colspan="2" align="right"><?php echo $_smarty_tpl->getVariable('pager')->value;?>
-</td>
-												<td colspan="1" align="left"><a class="btn btn-success btn-sm pull-left" href="country.html?do=add"><?php echo $_smarty_tpl->getVariable('lang')->value['add_country'];?>
-</a></td>
-											<?php }else{ ?>
-												<td colspan="3" align="right"><?php echo $_smarty_tpl->getVariable('pager')->value;?>
-</td>
-											<?php }?>
+
 										<?php }?>
 										</tr>
 									</tfoot>

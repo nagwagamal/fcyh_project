@@ -135,7 +135,7 @@
 								<div class="col-sm-10">
 									<select class="form-control" name="governorate">
 										{foreach from=$c item="_c"}
-											<option value="{$_c.id}"{if $n}{if $_c.id eq $n.governorate}selected="selected"{/if}{else} {if $_c.id eq $u.governorate}selected="selected"{/if}{/if}>{$_c.gov_name_ar} - {$_c.gov_name} </option>
+											<option value="{$_c.id}"{if $n}{if $_c.id eq $n.gov_id}selected="selected"{/if}{else} {if $_c.id eq $u.gov_id}selected="selected"{/if}{/if}>{$_c.gov_name_ar} - {$_c.gov_name} </option>
 										{/foreach}
 									</select>
 								</div>

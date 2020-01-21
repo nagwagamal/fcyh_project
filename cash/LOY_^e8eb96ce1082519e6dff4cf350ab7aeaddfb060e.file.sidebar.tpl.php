@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 14:37:09
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 14:59:27
          compiled from "./assets/themes\sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:98655e26f075a88b10-50724281%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'e8eb96ce1082519e6dff4cf350ab7aeaddfb060e' => 
     array (
       0 => './assets/themes\\sidebar.tpl',
-      1 => 1579609739,
+      1 => 1579611522,
       2 => 'file',
     ),
   ),

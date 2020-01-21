@@ -868,7 +868,7 @@ $lang['no_work_daily']                          = "لايوجد خط سير له
 //---------------SUPPLIERS-----------//
 
 $lang['country']=         "  دوله";
-$lang['add_country']=         "  اضافه دوله ";
+$lang['add_country']=         "   اضافه دوله جديده";
 
 $lang['chats']=         "  محادثات";
 $lang['complains']=         "  شكاوى";

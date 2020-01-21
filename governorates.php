@@ -121,6 +121,7 @@ include("./inc/Classes/system-country.php");
 					if($mId != 0)
 					{
 						$smarty->assign(area_name,"edit");
+                    $smarty->assign(c,$country->getsiteCountry());
 						$smarty->assign(u,$governorate->getGovernoratesInformation($mId));
 						$logs->addLog(10,
 									array(
@@ -164,13 +165,15 @@ include("./inc/Classes/system-country.php");
 				if($mId != 0)
 				{
 					$smarty->assign(area_name,"edit");
+                    $smarty->assign(c,$country->getsiteCountry());
+
 					$smarty->assign(u,$governorate->getGovernoratesInformation($mId));
 	        		if($_POST)
 	        		{
 	        			$_governorate['id'] 				                = 	$mId;
         				$_governorate['gov_name'] 		                    = 	sanitize($_POST["gov_name"]);
         				$_governorate['gov_name_ar'] 		                    = 	sanitize($_POST["gov_name_ar"]);
-                        $_governorate['count_id'] 		                    = 	sanitize($_POST["count_id"]);
+                        $_governorate['count_id'] 		                    = 	sanitize($_POST["country"]);
         				$_governorate['status'] 		                    = 	intval($_POST["status"]);
 
 

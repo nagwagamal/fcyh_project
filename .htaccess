@@ -9,6 +9,7 @@ RewriteRule ^setting\.html$ setting.php [QSA,L]
 RewriteRule ^groups\.html$ groups.php [QSA,L]
 RewriteRule ^logs\.html$ logs.php [QSA,L]
 RewriteRule ^cities\.html$ cities.php [QSA,L]
+RewriteRule ^governorates\.html$ governorates.php [QSA,L]
 
 RewriteRule ^country\.html$ country.php [QSA,L]
 RewriteRule ^users\.html$ users.php [QSA,L]

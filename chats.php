@@ -43,7 +43,7 @@ include("./inc/Classes/system-chats.php");
 					$smarty->assign(area_name,"list");
 					$smarty->assign('pager',$pager->getAnalysis());
 					$smarty->assign(u,$chats->getsiteChat($limitmequry));
-					$smarty->assign(p,$user->getsiteUsers($limitmequry));
+					$smarty->assign(p,$user->getsiteUsers());
 					/*$logs->addLog(7,
 									array(
 										"type" 		=> 	"admin",

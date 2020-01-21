@@ -64,17 +64,11 @@
 										{if $group.governorates_edit eq "1" || $group.governorates_delete eq "1" || $group.cities_list eq "1"  }
 											{if $group.governorates_add eq 1 }
 												<td colspan="3" align="right">{$pager}</td>
-												<td colspan="1" align="left"><a class="btn btn-success btn-sm pull-left" href="governorates.html?do=add">{$lang.add_governorate}</a></td>
+												<td colspan="1" align="left"><a class="btn btn-success btn-sm pull-left" href="country.html?do=add">{$lang.add_country}</a></td>
 											{else}
 												<td colspan="4" align="right">{$pager}</td>
 											{/if}
-										{else}
-											{if $group.governorates_add eq 1 }
-												<td colspan="2" align="right">{$pager}</td>
-												<td colspan="1" align="left"><a class="btn btn-success btn-sm pull-left" href="country.html?do=add">{$lang.add_country}</a></td>
-											{else}
-												<td colspan="3" align="right">{$pager}</td>
-											{/if}
+
 										{/if}
 										</tr>
 									</tfoot>
