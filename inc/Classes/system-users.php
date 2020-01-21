@@ -57,6 +57,8 @@ class systemUsers
 					"city_id"	    => 		$sitecountry['city_id'],
 					"lon"	    => 		$sitecountry['lon'],
 					"lat"	    => 		$sitecountry['lat'],
+					"address"	    => 		$sitecountry['address'],
+					"volunteer"	    => 		$sitecountry['volunteer'],
 					"type"			    => 		$sitecountry['type']
 				);
 			}else{return null;}
@@ -84,6 +86,8 @@ class systemUsers
 					`city_id`	    = 		'".$user[city_id]."',
 					`lon`	    = 		'".$user[lon]."',
 					`lat`	    = 		'".$user[lat]."',
+					`address`	    = 		'".$user[address]."',
+					`volunteer`	    = 		'".$user[volunteer]."',
 					`type`			    = 		'".$user[type]."'
 			WHERE `id` 		    = 	'".$user[id]."' LIMIT 1 ");
 		return 1;
@@ -110,8 +114,8 @@ class systemUsers
 	function addNewUsers($user)
 	{
 		$sql=$GLOBALS['db']->query("INSERT LOW_PRIORITY INTO `".$this->tableName."`
-		(`id`, `name`,`email`,`email_key`,`email_verified`,`mobile`,`mobile_key`,`mobile_verified`,`city_id`,`lon`,`lat`,`type`)VALUES
-		( NULL ,  '".$user[name]."' ,  '".$user[email]."' ,  '".$user[email_key]."' ,  '".$user[email_verified]."' ,  '".$user[mobile]."' ,  '".$user[mobile_key]."' ,  '".$user[mobile_verified]."' ,  '".$user[city_id]."' ,  '".$user[lon]."' ,'".$user[lat]."' ,'".$user[lat]."' ,  '1') ");
+		(`id`, `name`,`email`,`email_key`,`email_verified`,`mobile`,`mobile_key`,`mobile_verified`,`city_id`,`lon`,`lat`,`address`,`volunteer`,`type`)VALUES
+		( NULL ,  '".$user[name]."' ,  '".$user[email]."' ,  '".$user[email_key]."' ,  '".$user[email_verified]."' ,  '".$user[mobile]."' ,  '".$user[mobile_key]."' ,  '".$user[mobile_verified]."' ,  '".$user[city_id]."' ,  '".$user[lon]."' ,'".$user[lat]."' ,'".$user[address]."','".$user[volunteer]."' ,  '1') ");
 
 		return 1;
 	}

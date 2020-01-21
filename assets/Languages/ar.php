@@ -873,7 +873,15 @@ $lang['add_country']=         "  اضافه دوله ";
 $lang['chats']=         "  محادثات";
 $lang['add_chats']=         "  اضافه محادثه ";
 $lang['users']=         "  المستخدمين";
-$lang['add_users']=         "  اضافه مستخدم ";
+$lang['add_user']=         "  اضافه مستخدم ";
+$lang['email_verified']=         "  تفعيل الايميل";
+$lang['mobile_verified']=         "تفعيل الموبايل ";
+$lang['volunteer']=         "  متطوع ";
+$lang['email_key']=         "  كود الايميل";
+$lang['mobile_key']=         "  كود الموبايل ";
+$lang['from_user']=         "  من المستخدم";
+$lang['to_user']=         " الى المستخدم ";
+$lang['message']=         " الرساله ";
 
 
 

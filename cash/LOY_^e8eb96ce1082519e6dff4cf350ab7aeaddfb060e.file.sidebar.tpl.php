@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-20 14:44:19
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 14:13:14
          compiled from "./assets/themes\sidebar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:148135e25a0a3ef0dc9-94495108%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:237375e26eadaf221f0-53426574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e8eb96ce1082519e6dff4cf350ab7aeaddfb060e' => 
     array (
       0 => './assets/themes\\sidebar.tpl',
-      1 => 1579524252,
+      1 => 1579608791,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '148135e25a0a3ef0dc9-94495108',
+  'nocache_hash' => '237375e26eadaf221f0-53426574',
   'function' => 
   array (
   ),
@@ -132,14 +132,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </a>
                             </li>
                             <?php }?>
-                            <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
-                            <li>
-                                <a href="chats.html?do=add" style='background-color: #a3f5ca;'>
-                                    <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_chats'];?>
-</span>
-                                </a>
-                            </li>
-                            <?php }?> 
+
                         </ul>
                     </li>
                 </ul>
@@ -165,7 +158,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
                                 <a href="users.html?do=add" style='background-color: #a3f5ca;'>
-                                    <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_users'];?>
+                                    <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_user'];?>
 </span>
                                 </a>
                             </li>

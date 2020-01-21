@@ -7,9 +7,11 @@
 	// get funcamental file which contain config and template files,settings.
 	include("./inc/fundamentals.php");
 
-
+include("./inc/Classes/system-chats.php");
+	$chats = new systemChats();
 	
-	
+	include("./inc/Classes/system-users.php");
+	$user = new systemUsers();
 	if($login->doCheck() == false)
 	{
 		$smarty->assign(logMode,1);
@@ -35,12 +37,13 @@
 					if( $action == 'success'){
 						$smarty->assign(success,$lang['add_Governorates_success']);
 					}	*/
-					$pager->doAnalysisPager("page",$page,$basicLimit,$country->getTotalCountry(),"country.html".$paginationAddons,$paginationDialm);
+					$pager->doAnalysisPager("page",$page,$basicLimit,$chats->getTotalChat(),"chats.html".$paginationAddons,$paginationDialm);
 					$thispage = $pager->getPage();
 					$limitmequry = " LIMIT ".($thispage-1) * $basicLimit .",". $basicLimit;
 					$smarty->assign(area_name,"list");
 					$smarty->assign('pager',$pager->getAnalysis());
-					$smarty->assign(u,$country->getsiteCountry($limitmequry));
+					$smarty->assign(u,$chats->getsiteChat($limitmequry));
+					$smarty->assign(p,$user->getsiteUsers($limitmequry));
 					/*$logs->addLog(7,
 									array(
 										"type" 		=> 	"admin",
@@ -71,13 +74,14 @@
 									),"admin",$login->getUserId(),1
 								);*/
 						$smarty->assign(area_name,"view");
-						$smarty->assign(u,$country->getCountryInformation($mId));
+                        $smarty->assign(u,$chats->getChatInformation($mId));
+					   $smarty->assign(p,$user->getsiteUsers());
 					}
 				}
 			break;
                 }
 		$smarty->assign(footJs,array('list-controls.js'));
-		$tm->display("$lang[Governorates_mangment]","country.tpl");
+		$tm->display("$lang[Governorates_mangment]","chats.tpl");
 	}
 
 	$db->disconnect();

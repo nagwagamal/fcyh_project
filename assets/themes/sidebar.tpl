@@ -98,13 +98,7 @@
                                 </a>
                             </li>
                             {/if}
-                            {if $group.staffs_add eq 1 }
-                            <li>
-                                <a href="chats.html?do=add" style='background-color: #a3f5ca;'>
-                                    <span>{$lang.add_chats}</span>
-                                </a>
-                            </li>
-                            {/if} 
+
                         </ul>
                     </li>
                 </ul>
@@ -127,7 +121,7 @@
                             {if $group.staffs_add eq 1 }
                             <li>
                                 <a href="users.html?do=add" style='background-color: #a3f5ca;'>
-                                    <span>{$lang.add_users}</span>
+                                    <span>{$lang.add_user}</span>
                                 </a>
                             </li>
                             {/if} 
