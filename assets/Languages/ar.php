@@ -871,6 +871,7 @@ $lang['country']=         "  دوله";
 $lang['add_country']=         "  اضافه دوله ";
 
 $lang['chats']=         "  محادثات";
+$lang['complains']=         "  شكاوى";
 $lang['add_chats']=         "  اضافه محادثه ";
 $lang['users']=         "  المستخدمين";
 $lang['add_user']=         "  اضافه مستخدم ";
@@ -882,6 +883,9 @@ $lang['mobile_key']=         "  كود الموبايل ";
 $lang['from_user']=         "  من المستخدم";
 $lang['to_user']=         " الى المستخدم ";
 $lang['message']=         " الرساله ";
+$lang['complain']=         " شكوى ";
+$lang['date']=         " التاريخ ";
+
 
 
 

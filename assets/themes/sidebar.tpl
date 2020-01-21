@@ -108,6 +108,26 @@
                         <a href="javascript:;">
                             <i class="toggle-accordion"></i>
                             <i class="ti-layers"></i>
+                            <span> {$lang.complains} </span>
+                        </a>
+                        <ul class="sub-menu">
+
+                            <li>
+                                <a href="complains.html?do=list" style='background-color: #a3f5ca;'>
+                                    <span>{$lang.list} {$lang.complains} </span>
+                                </a>
+                            </li>
+                            {/if}
+
+                        </ul>
+                    </li>
+                </ul>
+                    <ul class="nav">
+                    <li>
+                        {if $group.staffs_list eq 1 }
+                        <a href="javascript:;">
+                            <i class="toggle-accordion"></i>
+                            <i class="ti-layers"></i>
                             <span> {$lang.users} </span>
                         </a>
                         <ul class="sub-menu">

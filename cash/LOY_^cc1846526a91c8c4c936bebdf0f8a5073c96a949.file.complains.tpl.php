@@ -1,27 +1,27 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 14:37:10
-         compiled from "./assets/themes\internal/chats.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:270845e26eb65c76406-18494449%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 14:38:26
+         compiled from "./assets/themes\internal/complains.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:7005e26f0c25b9066-81633771%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
-    '20763f6e21ae5c0bddc9d11c633d9d7f9114b11e' =>
+    'cc1846526a91c8c4c936bebdf0f8a5073c96a949' =>
     array (
-      0 => './assets/themes\\internal/chats.tpl',
-      1 => 1579609405,
+      0 => './assets/themes\\internal/complains.tpl',
+      1 => 1579610265,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '270845e26eb65c76406-18494449',
+  'nocache_hash' => '7005e26f0c25b9066-81633771',
   'function' =>
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
           	<?php if ($_smarty_tpl->getVariable('area_name')->value=='list'){?>
-          		<input type="hidden" value="chats" id="page">
-          		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['chats'];?>
+          		<input type="hidden" value="complains" id="page">
+          		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['complains'];?>
 " id="lang_name">
-          		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['chats'];?>
+          		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['complains'];?>
 " id="sheet">
           		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['delete_alarm_massage_in_woman'];?>
 " id="lang_del">
@@ -43,7 +43,7 @@ $_smarty_tpl->decodeProperties(array (
 
 							<div class="panel-heading no-b">
 								<h5> <?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
- <b> <?php echo $_smarty_tpl->getVariable('lang')->value['chats'];?>
+ <b> <?php echo $_smarty_tpl->getVariable('lang')->value['complains'];?>
  </b></h5>
 								<br>
 								<input id="myInput" type="text" class="form-control" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['search'];?>
@@ -57,11 +57,9 @@ $_smarty_tpl->decodeProperties(array (
 											<th>#</th>
 											<th><?php echo $_smarty_tpl->getVariable('lang')->value['from_user'];?>
 </th>
-											<th><?php echo $_smarty_tpl->getVariable('lang')->value['to_user'];?>
+											<th><?php echo $_smarty_tpl->getVariable('lang')->value['complain'];?>
 </th>
-											<th><?php echo $_smarty_tpl->getVariable('lang')->value['message'];?>
- </th>
-											<th><?php echo $_smarty_tpl->getVariable('lang')->value['time'];?>
+											<th><?php echo $_smarty_tpl->getVariable('lang')->value['date'];?>
  </th>
 										</tr>
 									</thead>
@@ -73,18 +71,15 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
 											<tr id="tr_<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 ">
-                                                <td><a href="chats.html?do=view&id=<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
+                                                <td><a href="complains.html?do=view&id=<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 "><?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 </a></td>
-												<td><?php echo $_smarty_tpl->getVariable('c')->value['from_user'];?>
+												<td><?php echo $_smarty_tpl->getVariable('c')->value['user_from'];?>
 </td>
-												<td><?php echo $_smarty_tpl->getVariable('c')->value['to_user'];?>
+												<td><?php echo $_smarty_tpl->getVariable('c')->value['complain'];?>
 </td>
-												<td><?php echo $_smarty_tpl->getVariable('c')->value['message'];?>
+												<td><?php echo $_smarty_tpl->getVariable('c')->value['date'];?>
 </td>
-												<td><?php echo $_smarty_tpl->getVariable('c')->value['time'];?>
-</td>
-
 											</tr>
 										<?php }} ?>
 									</tbody>
@@ -97,8 +92,8 @@ if ($_smarty_tpl->_count($_from) > 0){
 					</div>
 				</div>
 <?php }elseif($_smarty_tpl->getVariable('area_name')->value=='view'){?>
-          		<input type="hidden" value="chats" id="page">
-          		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['chats'];?>
+          		<input type="hidden" value="complains" id="page">
+          		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['complains'];?>
 " id="lang_name">
           		<input type="hidden" value="<?php echo $_smarty_tpl->getVariable('lang')->value['delete_alarm_massage_in_woman'];?>
 " id="lang_del">
@@ -134,34 +129,29 @@ if ($_smarty_tpl->_count($_from) > 0){
 						<?php }?>
 					<?php }?>
 					<section class="panel">
-						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['chats_details'];?>
+						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['complains_details'];?>
  ( # <?php echo $_smarty_tpl->getVariable('u')->value['id'];?>
  )</header>
 						<div class="panel-body">
 							<div class="alert alert-info">
-								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['from_user'];?>
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['user_from'];?>
  : </strong></span>
-								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['from_user'];?>
+								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['user_from'];?>
  </span>
 							</div>
                             <div class="alert alert-info">
-								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['to_user'];?>
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['complain'];?>
  : </strong></span>
-								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['to_user'];?>
+								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['complain'];?>
  </span>
 							</div>
                             <div class="alert alert-info">
-								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['message'];?>
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['date'];?>
  : </strong></span>
-								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['message'];?>
+								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['date'];?>
  </span>
 							</div>
-                            <div class="alert alert-info">
-								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['time'];?>
- : </strong></span>
-								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['time'];?>
- </span>
-							</div>
+
 
 							<div class="form-group" id="item_<?php echo $_smarty_tpl->getVariable('u')->value['id'];?>
 ">
