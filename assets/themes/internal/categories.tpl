@@ -111,7 +111,7 @@
 						{/if}
 					{/if}
 					<section class="panel">
-						<header class="panel-heading"> {$lang.edit_city}  ( # {$u.id} )</header>
+						<header class="panel-heading"> {$lang.edit_category}  ( # {$u.id} )</header>
 						<div class="panel-body">
 						<form class="form-horizontal" role="form" method="post" action="categories.html?do=update&id={$u.id}" enctype="multipart/form-data">
 						{if $u.parent_id  neq null}
@@ -181,7 +181,7 @@
 						{/if}
 					{/if}
 					<section class="panel">
-						<header class="panel-heading">  {$lang.city_details} ( # {$u.id} )</header>
+						<header class="panel-heading">  {$lang.category_details} ( # {$u.id} )</header>
 						<div class="panel-body">
 						<form class="form-horizontal" role="form" method="post" action="categories.html?do=update&id={$u.id}">
 
@@ -236,7 +236,7 @@
 						{/if}
 					{/if}
 					<section class="panel">
-						<header class="panel-heading"> {$lang.add_city}</header>
+						<header class="panel-heading"> {$lang.add_category}</header>
 						<div class="panel-body">
 						<form class="form-horizontal" role="form" method="post" action="categories.html?do=add_cat" enctype="multipart/form-data">
 

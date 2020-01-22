@@ -312,7 +312,7 @@
             break;
 		}
 		$smarty->assign(footJs,array('list-controls.js'));
-		$tm->display("$lang[Governorates_mangment]","country.tpl");
+		$tm->display("$lang[country_mangment]","country.tpl");
 	}
 
 	$db->disconnect();

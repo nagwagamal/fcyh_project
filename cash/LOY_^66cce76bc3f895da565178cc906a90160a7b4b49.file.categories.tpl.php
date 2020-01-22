@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 15:02:38
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 15:56:15
          compiled from "./assets/themes\internal/categories.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:235755e2847ee0bd393-85116995%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:248925e28547fc92066-31529302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     '66cce76bc3f895da565178cc906a90160a7b4b49' =>
     array (
       0 => './assets/themes\\internal/categories.tpl',
-      1 => 1579698155,
+      1 => 1579701349,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '235755e2847ee0bd393-85116995',
+  'nocache_hash' => '248925e28547fc92066-31529302',
   'function' =>
   array (
   ),
@@ -179,7 +179,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 						<?php }?>
 					<?php }?>
 					<section class="panel">
-						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['edit_city'];?>
+						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['edit_category'];?>
   ( # <?php echo $_smarty_tpl->getVariable('u')->value['id'];?>
  )</header>
 						<div class="panel-body">
@@ -283,7 +283,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 						<?php }?>
 					<?php }?>
 					<section class="panel">
-						<header class="panel-heading">  <?php echo $_smarty_tpl->getVariable('lang')->value['city_details'];?>
+						<header class="panel-heading">  <?php echo $_smarty_tpl->getVariable('lang')->value['category_details'];?>
  ( # <?php echo $_smarty_tpl->getVariable('u')->value['id'];?>
  )</header>
 						<div class="panel-body">
@@ -365,7 +365,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 						<?php }?>
 					<?php }?>
 					<section class="panel">
-						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['add_city'];?>
+						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['add_category'];?>
 </header>
 						<div class="panel-body">
 						<form class="form-horizontal" role="form" method="post" action="categories.html?do=add_cat" enctype="multipart/form-data">

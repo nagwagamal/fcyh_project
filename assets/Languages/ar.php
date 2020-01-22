@@ -869,7 +869,6 @@ $lang['no_work_daily']                          = "لايوجد خط سير له
 
 $lang['country']=         "  دوله";
 $lang['add_country']=         "   اضافه دوله جديده";
-
 $lang['chats']=         "  محادثات";
 $lang['complains']=         "  شكاوى";
 $lang['add_chats']=         "  اضافه محادثه ";
@@ -891,6 +890,16 @@ $lang['categories_1']=         " تصنيف اساسى ";
 $lang['add_categories_1']=         " اضافه تصنيف فرعى ";
 $lang['add_categories']=         " اضافه تصنيف اساسى ";
 $lang['category_name']=         " اسم تصنيف اساسى ";
+$lang['edit_category']=         "  تعديل بيانات تصنيف ";
+$lang['category_details']=         "   بيانات التصنيف ";
+$lang['add_category']=         "    اضافه تصنيف ";
+$lang['edit_country']=         "  تعديل بيانات دوله ";
+$lang['country_details']=         "   بيانات الدوله ";
+$lang['categories_mangment']         = "إدارة التصنيف";
+$lang['chats_mangment']         = "إدارة المحادثات";
+$lang['complains_mangment']         = "إدارة الشكاوى";
+$lang['country_mangment']         = "إدارة الدول";
+$lang['users_mangment']         = "إدارة المستخدمين";
 
 
 

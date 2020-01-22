@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 15:08:40
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 16:04:08
          compiled from "./assets/themes\internal/country.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:256215e26f7d86464b5-55830539%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:305395e28565840d868-79300310%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '10f9bc69141ae261da2a8db754a176579923ef3e' => 
     array (
       0 => './assets/themes\\internal/country.tpl',
-      1 => 1579612039,
+      1 => 1579701639,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '256215e26f7d86464b5-55830539',
+  'nocache_hash' => '305395e28565840d868-79300310',
   'function' => 
   array (
   ),
@@ -165,7 +165,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 						<?php }?>
 					<?php }?>
 					<section class="panel">
-						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['edit_governorate'];?>
+						<header class="panel-heading"> <?php echo $_smarty_tpl->getVariable('lang')->value['edit_country'];?>
 ( # <?php echo $_smarty_tpl->getVariable('u')->value['id'];?>
  )</header>
 						<div class="panel-body">

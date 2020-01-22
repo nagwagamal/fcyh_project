@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 17:41:14
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 16:13:24
          compiled from "./assets/themes\internal/cities.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:222005e270123ef7e64-22544825%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:36875e28588485b264-16855823%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '879a0326e7d8b441e58f6b4586db62896b2536bf' => 
     array (
       0 => './assets/themes\\internal/cities.tpl',
-      1 => 1579616851,
+      1 => 1579701548,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '222005e270123ef7e64-22544825',
+  'nocache_hash' => '36875e28588485b264-16855823',
   'function' => 
   array (
   ),
@@ -44,9 +44,7 @@ $_smarty_tpl->decodeProperties(array (
 							<div class="panel-heading no-b">
 								<h5> <?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <b> <?php echo $_smarty_tpl->getVariable('lang')->value['cities'];?>
- <?php if ($_smarty_tpl->getVariable('s')->value){?>(<?php echo $_smarty_tpl->getVariable('lang')->value['governorate'];?>
- / <?php echo getgovernoratename($_smarty_tpl->getVariable('s')->value);?>
- )<?php }?> </b></h5>
+  </b></h5>
 								<br>
 								<input id="myInput" type="text" class="form-control" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['search'];?>
 ">

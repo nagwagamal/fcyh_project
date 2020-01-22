@@ -81,7 +81,7 @@ include("./inc/Classes/system-complains.php");
 			break;
                 }
 		$smarty->assign(footJs,array('list-controls.js'));
-		$tm->display("$lang[Governorates_mangment]","complains.tpl");
+		$tm->display("$lang[complains_mangment]","complains.tpl");
 	}
 
 	$db->disconnect();

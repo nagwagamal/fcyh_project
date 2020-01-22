@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 16:25:19
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 15:57:58
          compiled from "./assets/themes\internal/chats.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:61355e2709cf1b3b43-58469505%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '20763f6e21ae5c0bddc9d11c633d9d7f9114b11e' =>
     array (
       0 => './assets/themes\\internal/chats.tpl',
-      1 => 1579616658,
+      1 => 1579616850,
       2 => 'file',
     ),
   ),

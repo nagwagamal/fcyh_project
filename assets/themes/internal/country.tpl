@@ -101,7 +101,7 @@
 						{/if}
 					{/if}
 					<section class="panel">
-						<header class="panel-heading"> {$lang.edit_governorate}( # {$u.id} )</header>
+						<header class="panel-heading"> {$lang.edit_country}( # {$u.id} )</header>
 						<div class="panel-body">
 						<form class="form-horizontal" role="form" method="post" action="country.html?do=update&id={$u.id}" enctype="multipart/form-data">
 

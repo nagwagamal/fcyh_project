@@ -81,7 +81,7 @@ include("./inc/Classes/system-chats.php");
 			break;
                 }
 		$smarty->assign(footJs,array('list-controls.js'));
-		$tm->display("$lang[Governorates_mangment]","chats.tpl");
+		$tm->display("$lang[chats_mangment]","chats.tpl");
 	}
 
 	$db->disconnect();

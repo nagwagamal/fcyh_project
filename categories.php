@@ -355,7 +355,7 @@
 
 		}
 		$smarty->assign(footJs,array('list-controls.js'));
-		$tm->display("$lang[cities_mangment]","categories.tpl");
+		$tm->display("$lang[categories_mangment]","categories.tpl");
 	}
 
 	$db->disconnect();

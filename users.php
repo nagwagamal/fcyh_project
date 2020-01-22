@@ -281,7 +281,7 @@
             break;
 		}
 		$smarty->assign(footJs,array('list-controls.js'));
-		$tm->display("$lang[Governorates_mangment]","users.tpl");
+		$tm->display("$lang[users_mangment]","users.tpl");
 	}
 
 	$db->disconnect();

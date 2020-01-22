@@ -15,7 +15,7 @@
 						{if $success}<div class="alert alert-success">{$success}</div>{/if}
 						<section class="panel">{$export}
 							<div class="panel-heading no-b">
-								<h5> {$lang.list} <b> {$lang.cities} {if $s}({$lang.governorate} / {$s|getgovernoratename} ){/if} </b></h5>
+								<h5> {$lang.list} <b> {$lang.cities}  </b></h5>
 								<br>
 								<input id="myInput" type="text" class="form-control" placeholder="{$lang.search}">
 							</div>
