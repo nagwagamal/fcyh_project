@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 16:04:03
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 16:38:15
          compiled from "./assets/themes\internal/dashboard.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:41225e28565388f871-20400137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '3219b415dba58dc3254def591e8f4893db76c7cc' => 
     array (
       0 => './assets/themes\\internal/dashboard.tpl',
-      1 => 1579701841,
+      1 => 1579703373,
       2 => 'file',
     ),
   ),
