@@ -51,7 +51,7 @@ class systemCities
 				$sitecountry = $GLOBALS['db']->fetchitem($query);
 				return array(
 					"id"				    => 		$sitecountry['id'],
-					"gov_id "			    => 		$sitecountry['gov_id'],
+					"gov_id"			    => 		$sitecountry['gov_id'],
 					"city_name"		        => 		$sitecountry['city_name'],
 					"city_name_ar"		        => 		$sitecountry['city_name_ar'],
 					"status"			    => 		$sitecountry['status']
@@ -72,7 +72,7 @@ class systemCities
 	{
 		
 		$GLOBALS['db']->query("UPDATE LOW_PRIORITY `".$this->tableName."` SET
-			`gov_id`			=	'".$city[governorate]."',
+			`gov_id`			=	'".$city[gov_id]."',
 			`city_name_ar`		    =	'".$city[city_name_ar]."',
 			`city_name`		    =	'".$city[city_name]."',
 			`status`		    =	'".$city[status]."'
