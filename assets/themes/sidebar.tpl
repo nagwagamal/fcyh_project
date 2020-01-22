@@ -148,6 +148,39 @@
                         </ul>
                     </li>
                 </ul>
+                    <ul class="nav">
+                    <li>
+                        {if $group.staffs_list eq 1 }
+                        <a href="javascript:;">
+                            <i class="toggle-accordion"></i>
+                            <i class="ti-layers"></i>
+                            <span> {$lang.categories} </span>
+                        </a>
+                        <ul class="sub-menu">
+
+                            <li>
+                                <a href="categories.html?do=list" style='background-color: #a3f5ca;'>
+                                    <span>{$lang.list} {$lang.categories} </span>
+                                </a>
+                            </li>
+                            {/if}
+                            {if $group.staffs_add eq 1 }
+                            <li>
+                                <a href="categories.html?do=add" style='background-color: #a3f5ca;'>
+                                    <span>{$lang.add_categories}</span>
+                                </a>
+                            </li>
+                            {/if}
+                            {if $group.staffs_add eq 1 }
+                            <li>
+                                <a href="categories.html?do=add_cat" style='background-color: #a3f5ca;'>
+                                    <span>{$lang.add_categories_1}</span>
+                                </a>
+                            </li>
+                            {/if}
+                        </ul>
+                    </li>
+                </ul>
                    
 
 

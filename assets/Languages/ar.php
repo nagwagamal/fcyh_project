@@ -885,6 +885,12 @@ $lang['to_user']=         " الى المستخدم ";
 $lang['message']=         " الرساله ";
 $lang['complain']=         " شكوى ";
 $lang['date']=         " التاريخ ";
+$lang['categories']=         " التصنيفات ";
+$lang['category']=         " تصنيف  ";
+$lang['categories_1']=         " تصنيف اساسى ";
+$lang['add_categories_1']=         " اضافه تصنيف فرعى ";
+$lang['add_categories']=         " اضافه تصنيف اساسى ";
+$lang['category_name']=         " اسم تصنيف اساسى ";
 
 
 
