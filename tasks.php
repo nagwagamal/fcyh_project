@@ -25,6 +25,65 @@ if($login->doCheck() == false)
 	{
         switch($_GET['do'])
         {  case"":
+         case"list":
+             if($login->doCheckPermission("governorates_add") == false)
+				{
+					$tm->fetch("$lang[not_permission]","user-permission.tpl");
+				}else
+				{include("./inc/Classes/pager.class.php");
+					$pager      = new pager();
+					$page 		= intval($_GET[page]);
+/*
+					$action = $_GET['action'] ;
+					if( $action == 'success'){
+						$smarty->assign(success,$lang['add_Governorates_success']);
+					}	*/
+					$pager->doAnalysisPager("page",$page,$basicLimit,$tasks->getTotalTasks(),"tasks.html".$paginationAddons,$paginationDialm);
+					$thispage = $pager->getPage();
+					$limitmequry = " LIMIT ".($thispage-1) * $basicLimit .",". $basicLimit;
+                    $smarty->assign(area_name,"list");
+            	    $smarty->assign(p,$users->getsiteUsers());
+					$smarty->assign(c,$category->getsiteCategories());
+                    $smarty->assign('pager',$pager->getAnalysis());
+					$smarty->assign(u,$tasks->getsiteTasks($limitmequry));
+					/*$logs->addLog(7,
+									array(
+										"type" 		=> 	"admin",
+										"module" 	=> 	"Governorates",
+										"mode" 		=> 	"list",
+										"Governorates" => $governorate->getTotalGovernorates(),
+										"id" 		=>	$login->getUserId(),
+									),"admin",$login->getUserId(),1
+								);*/
+
+
+                }
+break;
+         case"delete":
+				if($login->doCheckPermission("governorates_delete") == false)
+				{
+					$tm->fetch("$lang[not_permission]","user-permission.tpl");
+				}
+				else
+				{
+					$mId = intval($_POST['id']);
+					$delete = $tasks->deleteTasks($mId);
+					if($delete == 1)
+					{
+						/*$logs->addLog(9,
+									array(
+										"type" 		=> 	"admin",
+										"module" 	=> 	"Governorates",
+										"mode" 		=> 	"delete",
+										"country"   => $mId,
+										"id" 		=>	$login->getUserId(),
+									),"admin",$login->getUserId(),1
+								);*/
+						echo 116;
+						exit;
+					}
+				}
+			break;
            case"add":
          if($login->doCheckPermission("governorates_add") == false)
 				{
@@ -38,14 +97,14 @@ if($login->doCheck() == false)
 					if($_POST)
 					{
 
-	        			$_task['tittle'] 		                    = 	sanitize($_POST["tittle"]);
+	        			$_task['title'] 		                    = 	sanitize($_POST["title"]);
         				$_task['cat_id'] 		                    = 	sanitize($_POST["category"]);
         				$_task['description'] 		                    = 	sanitize($_POST["description"]);
         				$_task['img'] 		                    = 	sanitize($_POST["img"]);
         				$_task['lon'] 		                    = 	sanitize($_POST["lon"]);
         				$_task['lat'] 		                    = 	sanitize($_POST["lat"]);
-        				$_task['assiged_to'] 		                    = 	sanitize($_POST["assiged_to"]);
-        				$_task['user_id'] 		                    = 	sanitize($_POST["user_id"]);
+        				$_task['assiged_to'] 		                    = 	sanitize($_POST["assigned"]);
+        				$_task['user_id'] 		                    = 	sanitize($_POST["user_task"]);
         				$_task['requested_time'] 		                    = 	sanitize($_POST["requested_time"]);
         				$_task['arrived_time'] 		                    = 	sanitize($_POST["arrived_time"]);
         				$_task['total_time'] 		                    = 	sanitize($_POST["total_time"]);
@@ -80,7 +139,7 @@ if($login->doCheck() == false)
 									),"admin",$login->getUserId(),1
 								);
 */
-								header( 'Location:users.html' );
+								header( 'Location:tasks.html' );
                                 exit;
 								// $smarty->assign(area_name,"list") ;
 								// $smarty->assign(success,$lang['add_Governorates_success']);
@@ -100,6 +159,115 @@ if($login->doCheck() == false)
 					}
 				}
             break;
+         case"update":
+			    $mId = intval($_GET['id']);
+				if($mId != 0)
+				{
+					$smarty->assign(area_name,"edit");
+            	$smarty->assign(p,$users->getsiteUsers());
+					$smarty->assign(c,$category->getsiteCategories());
+
+					if($_POST)
+					{
+
+	        			$_task['title'] 		                    = 	sanitize($_POST["tittle"]);
+        				$_task['cat_id'] 		                    = 	sanitize($_POST["category"]);
+        				$_task['description'] 		                    = 	sanitize($_POST["description"]);
+        				$_task['img'] 		                    = 	sanitize($_POST["img"]);
+        				$_task['lon'] 		                    = 	sanitize($_POST["lon"]);
+        				$_task['lat'] 		                    = 	sanitize($_POST["lat"]);
+        				$_task['assiged_to'] 		                    = 	sanitize($_POST["assigned"]);
+        				$_task['user_id'] 		                    = 	sanitize($_POST["user_task"]);
+        				$_task['requested_time'] 		                    = 	sanitize($_POST["requested_time"]);
+        				$_task['arrived_time'] 		                    = 	sanitize($_POST["arrived_time"]);
+        				$_task['total_time'] 		                    = 	sanitize($_POST["total_time"]);
+        				$_task['review'] 		                    = 	sanitize($_POST["review"]);
+
+
+	        			if ($_task[tittle]  =="" )
+	        			{
+	        				$_task[tittle] = $lang['no_name'];
+	        			}
+
+
+	                    if(is_array($errors))
+	                    {
+	                    	$smarty->assign(errors,$errors);
+							$smarty->assign(n,$_task);
+	                    }else
+	                    {
+	                    	$update = $tasks->setTasksInformation($_task);
+							if($update == 1)
+							{
+								$smarty->assign(success,$lang['edit_Governorates_success']);
+								include("./inc/Classes/pager.class.php");
+								$pager = new pager();
+								$page  = intval($_GET[page]);
+
+				                $pager->doAnalysisPager("page",$page,$basicLimit,$tasks->getTotalTasks(),"tasks.html".$paginationAddons,$paginationDialm);
+
+				                $thispage = $pager->getPage();
+				                $limitmequry = " LIMIT ".($thispage-1) * $basicLimit .",". $basicLimit;
+
+								$smarty->assign(area_name,"list");
+								$smarty->assign('pager',$pager->getAnalysis());
+					$smarty->assign(u,$tasks->getsiteTasks($limitmequry));
+							}
+	                    }
+	                }
+				}
+            break;
+         case"edit":
+				if($login->doCheckPermission("governorates_edit") == false)
+				{
+					$tm->fetch("$lang[not_permission]","user-permission.tpl");
+				}
+				else
+				{
+					$mId = intval($_GET['id']);
+					if($mId != 0)
+					{
+						$smarty->assign(area_name,"edit");
+                        $smarty->assign(p,$users->getsiteUsers());
+					$smarty->assign(c,$category->getsiteCategories());
+						$smarty->assign(u,$tasks->getTasksInformation($mId));
+//						$logs->addLog(10,
+//									array(
+//										"type" 		=> 	"admin",
+//										"module" 	=> 	"Governorates",
+//										"mode" 		=> 	"edit",
+//										"country"   => $mId,
+//										"id" 		=>	$login->getUserId(),
+//									),"admin",$login->getUserId(),1
+//								);
+					}
+				}
+			break;
+         case"view":
+				if($login->doCheckPermission("governorates_view") == false)
+				{
+					$tm->fetch("$lang[not_permission]","user-permission.tpl");
+				}else
+				{
+					$mId = intval($_GET['id']);
+					if($mId != 0)
+					{/*
+						$logs->addLog(11,
+									array(
+										"type" 		=> 	"admin",
+										"module" 	=> 	"Governorates",
+										"mode" 		=> 	"view",
+										"country"   => $mId,
+										"id" 		=>	$login->getUserId(),
+									),"admin",$login->getUserId(),1
+								);*/
+						$smarty->assign(area_name,"view");
+						$smarty->assign(u,$tasks->getTasksInformation($mId));
+                        $smarty->assign(p,$users->getsiteUsers());
+					 $smarty->assign(c,$category->getsiteCategories());
+					}
+				}
+			break;
       }
 		$smarty->assign(footJs,array('list-controls.js'));
 		$tm->display("$lang[tasks_mangment]","tasks.tpl");

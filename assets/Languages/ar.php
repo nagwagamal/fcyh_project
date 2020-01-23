@@ -909,6 +909,7 @@ $lang['requested_time']         = "وقت الطلب";
 $lang['arrived_time']         = "وقت الوصول";
 $lang['total_time']         = "الوقت الكلى";
 $lang['review']         = "ريفيو";
+$lang['tasks']         = "مهمات";
 
 
 
