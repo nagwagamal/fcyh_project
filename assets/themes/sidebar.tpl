@@ -181,6 +181,33 @@
                         </ul>
                     </li>
                 </ul>
+                   <ul class="nav">
+                    <li>
+                        {if $group.staffs_list eq 1 }
+                        <a href="javascript:;">
+                            <i class="toggle-accordion"></i>
+                            <i class="ti-layers"></i>
+                            <span> {$lang.tasks} </span>
+                        </a>
+                        <ul class="sub-menu">
+
+                            <li>
+                                <a href="tasks.html?do=list" style='background-color: #a3f5ca;'>
+                                    <span>{$lang.list} {$lang.tasks} </span>
+                                </a>
+                            </li>
+                            {/if}
+                            {if $group.staffs_add eq 1 }
+                            <li>
+                                <a href="tasks.html?do=add" style='background-color: #a3f5ca;'>
+                                    <span>{$lang.tasks}</span>
+                                </a>
+                            </li>
+                            {/if}
+
+                        </ul>
+                    </li>
+                </ul>
                    
 
 

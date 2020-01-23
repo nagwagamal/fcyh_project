@@ -888,6 +888,7 @@ $lang['categories']=         " التصنيفات ";
 $lang['category']=         " تصنيف  ";
 $lang['categories_1']=         " تصنيف اساسى ";
 $lang['add_categories_1']=         " اضافه تصنيف فرعى ";
+$lang['add_tasks']=         " اضافه  مهمه ";
 $lang['add_categories']=         " اضافه تصنيف اساسى ";
 $lang['category_name']=         " اسم تصنيف اساسى ";
 $lang['edit_category']=         "  تعديل بيانات تصنيف ";
@@ -900,6 +901,17 @@ $lang['chats_mangment']         = "إدارة المحادثات";
 $lang['complains_mangment']         = "إدارة الشكاوى";
 $lang['country_mangment']         = "إدارة الدول";
 $lang['users_mangment']         = "إدارة المستخدمين";
+$lang['title']         = "عنوان المهمه";
+$lang['description']         = "الوصف";
+$lang['user_task_name']         = "اسم طالب المهمه";
+$lang['user_assigned_name']         = "اسم المتطوع";
+$lang['requested_time']         = "وقت الطلب";
+$lang['arrived_time']         = "وقت الوصول";
+$lang['total_time']         = "الوقت الكلى";
+$lang['review']         = "ريفيو";
+
+
+
 
 
 
