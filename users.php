@@ -205,7 +205,6 @@
 					if($_POST)
 					{
 
-
 	        			$_user['name'] 		                    = 	sanitize($_POST["name"]);
         				$_user['email'] 		                    = 	sanitize($_POST["email"]);
         				$_user['email_key'] 		                    = 	sanitize($_POST["email_key"]);

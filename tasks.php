@@ -169,15 +169,15 @@ break;
 
 					if($_POST)
 					{
-
+	        			$_task['id'] 				                = 	$mId;
 	        			$_task['title'] 		                    = 	sanitize($_POST["tittle"]);
         				$_task['cat_id'] 		                    = 	sanitize($_POST["category"]);
         				$_task['description'] 		                    = 	sanitize($_POST["description"]);
         				$_task['img'] 		                    = 	sanitize($_POST["img"]);
         				$_task['lon'] 		                    = 	sanitize($_POST["lon"]);
         				$_task['lat'] 		                    = 	sanitize($_POST["lat"]);
-        				$_task['assiged_to'] 		                    = 	sanitize($_POST["assigned"]);
-        				$_task['user_id'] 		                    = 	sanitize($_POST["user_task"]);
+        				$_task['assiged_to'] 		                    = 	sanitize($_POST["assiged_to"]);
+        				$_task['user_id'] 		                    = 	sanitize($_POST["user_id"]);
         				$_task['requested_time'] 		                    = 	sanitize($_POST["requested_time"]);
         				$_task['arrived_time'] 		                    = 	sanitize($_POST["arrived_time"]);
         				$_task['total_time'] 		                    = 	sanitize($_POST["total_time"]);

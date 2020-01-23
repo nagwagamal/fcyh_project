@@ -349,7 +349,7 @@
 							</div>
                             <div class="form-group">
 								<div class="col-sm-10">
-									<select class="form-control" name="category">
+									<select class="form-control" name="user_id">
 										{foreach from=$p item="_p"}
                                         <option value="{$_p.id}"{if $n}{if $_p.id eq $n.user_id}selected="selected"{/if}{else} {if $_p.id eq $u.user_id}selected="selected"{/if}{/if}>{$_p.name} </option>
 										{/foreach}
@@ -358,7 +358,7 @@
 								<label class="col-sm-2 control-label">{$lang.user_task_name}</label>
 							</div><div class="form-group">
 								<div class="col-sm-10">
-									<select class="form-control" name="category">
+									<select class="form-control" name="assiged_to">
 										{foreach from=$p item="_p"}
                                         <option value="{$_p.id}"{if $n}{if $_p.id eq $n.assiged_to}selected="selected"{/if}{else} {if $_p.id eq $u.assiged_to}selected="selected"{/if}{/if}>{$_p.name} </option>
 										{/foreach}
@@ -387,14 +387,14 @@
 								<label class="col-sm-2 control-label">{$lang.requested_time}</label>
 							</div>
 
-		<div class="form-group">
+		                 <div class="form-group">
 								<div class="col-sm-10">
 									<input type="text" class="form-control" name="arrived_time" placeholder="{$lang.arrived_time}" value="{if $n}{$n.arrived_time}{else}{$u.arrived_time}{/if}">
 								</div>
 								<label class="col-sm-2 control-label">{$lang.arrived_time}</label>
 							</div>
 
-		<div class="form-group">
+		                <div class="form-group">
 								<div class="col-sm-10">
 									<input type="text" class="form-control" name="total_time" placeholder="{$lang.total_time}" value="{if $n}{$n.total_time}{else}{$u.total_time}{/if}">
 								</div>
@@ -410,28 +410,14 @@
 
 							<div class="form-group">
 								<div class="col-sm-10">
-									<select class="form-control" name="mobile_verified">
-										<option value="0" {if $n}{if $n.mobile_verified eq 0}selected="selected"{/if}{else}{if $u.mobile_verified eq 0}selected="selected"{/if}{/if}>{$lang.deactive}</option>
-										<option value="1" {if $n}{if $n.mobile_verified eq 1}selected="selected"{/if}{else}{if $u.mobile_verified eq 1}selected="selected"{/if}{/if}>{$lang.active}</option>
+									<select class="form-control" name="status">
+										<option value="0" {if $n}{if $n.status eq 0}selected="selected"{/if}{else}{if $u.status eq 0}selected="selected"{/if}{/if}>{$lang.deactive}</option>
+										<option value="1" {if $n}{if $n.status eq 1}selected="selected"{/if}{else}{if $u.status eq 1}selected="selected"{/if}{/if}>{$lang.active}</option>
 									</select>
 								</div>
-								<label class="col-sm-2 control-label">{$lang.mobile_verified}</label>
+								<label class="col-sm-2 control-label">{$lang.status}</label>
 							</div>
-                            <div class="form-group">
-								<div class="col-sm-10">
-									<input type="text" class="form-control" name="address" placeholder="{$lang.address}" value="{if $n}{$n.address}{else}{$u.address}{/if}">
-								</div>
-								<label class="col-sm-2 control-label">{$lang.address}</label>
-							</div>
-                            <div class="form-group">
-								<div class="col-sm-10">
-									<select class="form-control" name="volunteer">
-										<option value="0" {if $n}{if $n.volunteer eq 0}selected="selected"{/if}{else}{if $u.volunteer eq 0}selected="selected"{/if}{/if}>{$lang.deactive}</option>
-										<option value="1" {if $n}{if $n.volunteer eq 1}selected="selected"{/if}{else}{if $u.volunteer eq 1}selected="selected"{/if}{/if}>{$lang.active}</option>
-									</select>
-								</div>
-								<label class="col-sm-2 control-label">{$lang.volunteer}</label>
-							</div>
+
 							<div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default">{$lang.update}</button></div>
 							</div>

@@ -76,8 +76,9 @@ class systemTasks
 
 		$GLOBALS['db']->query("UPDATE LOW_PRIORITY `".$this->tableName."` SET
 
-			`tittle`	    = 		'".$_task[tittle]."',
+			`tittle`	    = 		'".$_task[title]."',
 					`description`	    = 		'".$_task[description]."',
+					`cat_id`	    = 		'".$_task[cat_id]."',
 					`img`	    = 		'".$_task[img]."',
 					`lon`	    = 		'".$_task[lon]."',
 					`lat`	    = 		'".$_task[lat]."',
@@ -86,7 +87,8 @@ class systemTasks
 					`requested_time`	    = 		'".$_task[requested_time]."',
 					`arrived_time`	    = 		'".$_task[arrived_time]."',
 					`total_time`	    = 		'".$_task[total_time]."',
-					`review`	    = 		'".$_task[review]."'
+					`review`	    = 		'".$_task[review]."',
+					`status`	    = 		'".$_task[status]."'
 
 			WHERE `id` 		    = 	'".$_task[id]."' LIMIT 1 ");
 		return 1;

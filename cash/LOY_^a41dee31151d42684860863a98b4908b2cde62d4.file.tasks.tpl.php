@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-23 15:47:54
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-23 17:01:56
          compiled from "./assets/themes\internal/tasks.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:48495e29a40a9ae9f2-74610811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:283655e29b564c2f103-20479656%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     'a41dee31151d42684860863a98b4908b2cde62d4' =>
     array (
       0 => './assets/themes\\internal/tasks.tpl',
-      1 => 1579787262,
+      1 => 1579791701,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '48495e29a40a9ae9f2-74610811',
+  'nocache_hash' => '283655e29b564c2f103-20479656',
   'function' =>
   array (
   ),
@@ -533,7 +533,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 							</div>
                             <div class="form-group">
 								<div class="col-sm-10">
-									<select class="form-control" name="category">
+									<select class="form-control" name="user_id">
 										<?php  $_smarty_tpl->tpl_vars["_p"] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('p')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
@@ -549,7 +549,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 </label>
 							</div><div class="form-group">
 								<div class="col-sm-10">
-									<select class="form-control" name="category">
+									<select class="form-control" name="assiged_to">
 										<?php  $_smarty_tpl->tpl_vars["_p"] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('p')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
@@ -597,7 +597,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 </label>
 							</div>
 
-		<div class="form-group">
+		                 <div class="form-group">
 								<div class="col-sm-10">
 									<input type="text" class="form-control" name="arrived_time" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['arrived_time'];?>
 " value="<?php if ($_smarty_tpl->getVariable('n')->value){?><?php echo $_smarty_tpl->getVariable('n')->value['arrived_time'];?>
@@ -608,7 +608,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 </label>
 							</div>
 
-		<div class="form-group">
+		                <div class="form-group">
 								<div class="col-sm-10">
 									<input type="text" class="form-control" name="total_time" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['total_time'];?>
 " value="<?php if ($_smarty_tpl->getVariable('n')->value){?><?php echo $_smarty_tpl->getVariable('n')->value['total_time'];?>
@@ -632,38 +632,17 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 							<div class="form-group">
 								<div class="col-sm-10">
-									<select class="form-control" name="mobile_verified">
-										<option value="0" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['mobile_verified']==0){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['mobile_verified']==0){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
+									<select class="form-control" name="status">
+										<option value="0" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['status']==0){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['status']==0){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
 </option>
-										<option value="1" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['mobile_verified']==1){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['mobile_verified']==1){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
-</option>
-									</select>
-								</div>
-								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['mobile_verified'];?>
-</label>
-							</div>
-                            <div class="form-group">
-								<div class="col-sm-10">
-									<input type="text" class="form-control" name="address" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['address'];?>
-" value="<?php if ($_smarty_tpl->getVariable('n')->value){?><?php echo $_smarty_tpl->getVariable('n')->value['address'];?>
-<?php }else{ ?><?php echo $_smarty_tpl->getVariable('u')->value['address'];?>
-<?php }?>">
-								</div>
-								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['address'];?>
-</label>
-							</div>
-                            <div class="form-group">
-								<div class="col-sm-10">
-									<select class="form-control" name="volunteer">
-										<option value="0" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['volunteer']==0){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['volunteer']==0){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
-</option>
-										<option value="1" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['volunteer']==1){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['volunteer']==1){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
+										<option value="1" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['status']==1){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['status']==1){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
 </option>
 									</select>
 								</div>
-								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['volunteer'];?>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['status'];?>
 </label>
 							</div>
+
 							<div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default"><?php echo $_smarty_tpl->getVariable('lang')->value['update'];?>
 </button></div>
