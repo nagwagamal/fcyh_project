@@ -13,14 +13,14 @@
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="country.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="country.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.country} </span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="country.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="country.html?do=add" style='background-color: #EA6E34;'>
                                     <span>{$lang.add_country}</span>
                                 </a>
                             </li>
@@ -40,14 +40,14 @@
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="governorates.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="governorates.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.governorate} </span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="governorates.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="governorates.html?do=add" style='background-color: #EA6E34;'>
                                     <span>{$lang.add_governorate}</span>
                                 </a>
                             </li>
@@ -67,14 +67,14 @@
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="cities.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="cities.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.city} </span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="cities.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="cities.html?do=add" style='background-color: #EA6E34;'>
                                     <span>{$lang.add_city}</span>
                                 </a>
                             </li>
@@ -93,7 +93,7 @@
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="chats.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="chats.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.chats} </span>
                                 </a>
                             </li>
@@ -113,7 +113,7 @@
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="complains.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="complains.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.complains} </span>
                                 </a>
                             </li>
@@ -133,14 +133,14 @@
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="users.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="users.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.users} </span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="users.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="users.html?do=add" style='background-color: #EA6E34;'>
                                     <span>{$lang.add_user}</span>
                                 </a>
                             </li>
@@ -159,21 +159,21 @@
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="categories.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="categories.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.categories} </span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="categories.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="categories.html?do=add" style='background-color: #EA6E34;'>
                                     <span>{$lang.add_categories}</span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="categories.html?do=add_cat" style='background-color: #a3f5ca;'>
+                                <a href="categories.html?do=add_cat" style='background-color: #EA6E34;'>
                                     <span>{$lang.add_categories_1}</span>
                                 </a>
                             </li>
@@ -192,14 +192,14 @@
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="tasks.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="tasks.html?do=list" style='background-color: #EA6E34;'>
                                     <span>{$lang.list} {$lang.tasks} </span>
                                 </a>
                             </li>
                             {/if}
                             {if $group.staffs_add eq 1 }
                             <li>
-                                <a href="tasks.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="tasks.html?do=add" style='background-color: #EA6E34;'>
                                     <span>{$lang.tasks}</span>
                                 </a>
                             </li>

@@ -28,12 +28,12 @@
 											<th>#</th>
 											<th>{$lang.name}</th>
 											<th>{$lang.email}</th>
-											<th>{$lang.email_verified} </th>
 											<th>{$lang.mobile} </th>
-											<th>{$lang.mobile_verified} </th>
 											<th>{$lang.city} </th>
 											<th>{$lang.address} </th>
+											<th>{$lang.type} </th>
 											<th>{$lang.volunteer} </th>
+											<th>{$lang.status } </th>
 											{if $group.governorates_edit eq "1" || $group.governorates_delete eq "1" || $group.cities_list eq "1"  }
 												<th>{$lang.settings}</th>
 											{/if}
@@ -47,23 +47,18 @@
 													<a href="users.html?do=view&id={$c.id}">{$c.name}</a> <br />
 												</td>
                                                 <td>{$c.email}</td>
-												<td>
-													{if $c.email_verified eq 1}
-													<a class="badge bg-success status_deactive" id="{$c.id}"  title="{$lang.deactivation}">{$lang.active}</a>
-													{else}<a class="badge bg-danger status_active" id="{$c.id}" title="{$lang.activation}"> {$lang.deactive} </a>
-													{/if}
-												</td>
                                                 <td>{$c.mobile}</td>
-												<td>
-													{if $c.mobile_verified eq 1}
-													<a class="badge bg-success status_deactive" id="{$c.id}"  title="{$lang.deactivation}">{$lang.active}</a>
-													{else}<a class="badge bg-danger status_active" id="{$c.id}" title="{$lang.activation}"> {$lang.deactive} </a>
-													{/if}
-												</td>
                                                <td>{$c.city}</td>
                                                 <td>{$c.address}</td>
+                                                <td>{$c.type}</td>
                                                 <td>
-													{if $c.volunteer eq 1}
+													{if $c.volunteer   eq 1}
+													<a class="badge bg-success status_deactive" id="{$c.id}"  title="{$lang.deactivation}">{$lang.active}</a>
+													{else}<a class="badge bg-danger status_active" id="{$c.id}" title="{$lang.activation}"> {$lang.deactive} </a>
+													{/if}
+												</td>
+                                                <td>
+													{if $c.status  eq 1}
 													<a class="badge bg-success status_deactive" id="{$c.id}"  title="{$lang.deactivation}">{$lang.active}</a>
 													{else}<a class="badge bg-danger status_active" id="{$c.id}" title="{$lang.activation}"> {$lang.deactive} </a>
 													{/if}
@@ -191,12 +186,27 @@
 							</div>
                             <div class="form-group">
 								<div class="col-sm-10">
+									<input type="text" class="form-control" name="type" placeholder="{$lang.type}" value="{if $n}{$n.type}{else}{$u.type}{/if}">
+								</div>
+								<label class="col-sm-2 control-label">{$lang.type}</label>
+							</div>
+                            <div class="form-group">
+								<div class="col-sm-10">
 									<select class="form-control" name="volunteer">
 										<option value="0" {if $n}{if $n.volunteer eq 0}selected="selected"{/if}{else}{if $u.volunteer eq 0}selected="selected"{/if}{/if}>{$lang.deactive}</option>
 										<option value="1" {if $n}{if $n.volunteer eq 1}selected="selected"{/if}{else}{if $u.volunteer eq 1}selected="selected"{/if}{/if}>{$lang.active}</option>
 									</select>
 								</div>
 								<label class="col-sm-2 control-label">{$lang.volunteer}</label>
+							</div>
+                            <div class="form-group">
+								<div class="col-sm-10">
+									<select class="form-control" name="status">
+										<option value="0" {if $n}{if $n.volunteer eq 0}selected="selected"{/if}{else}{if $u.status eq 0}selected="selected"{/if}{/if}>{$lang.deactive}</option>
+										<option value="1" {if $n}{if $n.volunteer eq 1}selected="selected"{/if}{else}{if $u.status eq 1}selected="selected"{/if}{/if}>{$lang.active}</option>
+									</select>
+								</div>
+								<label class="col-sm-2 control-label">{$lang.status}</label>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default">{$lang.update}</button></div>
@@ -261,10 +271,18 @@
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.address} : </strong></span>
 								<span style="width:80%;display:inline-block;">{$u.address} </span>
 							</div>
+                          <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.type} : </strong></span>
+								<span style="width:80%;display:inline-block;">{$u.type} </span>
+							</div>
 
 							<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.volunteer} : </strong></span>
 								<span style="width:80%;display:inline-block;">{if $u.volunteer eq 0}{$lang.deactive}{else}{$lang.active}{/if}</span>
+							</div>
+                     <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.status} : </strong></span>
+								<span style="width:80%;display:inline-block;">{if $u.status eq 0}{$lang.deactive}{else}{$lang.active}{/if}</span>
 							</div>
 
 							<div class="form-group" id="item_{$u.id}">
@@ -343,6 +361,12 @@
 									<input type="text" class="form-control" name="address" placeholder="{$lang.address}" value="{if $n}{$n.address}{/if}">
 								</div>
 								<label class="col-sm-2 control-label">{$lang.address}</label>
+							</div>
+                            <div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="type" placeholder="{$lang.type}" value="{if $n}{$n.type}{/if}">
+								</div>
+								<label class="col-sm-2 control-label">{$lang.type}</label>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default">{$lang.add_user}</button></div>

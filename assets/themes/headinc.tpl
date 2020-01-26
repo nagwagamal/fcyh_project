@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./assets/css/fonts/font.css">
     <link rel="stylesheet" href="./assets/css/main_{$lang.DEFAULT}.css">
     <link rel="stylesheet" href="./assets/dist/summernote-bs4.css">
+    <link rel="stylesheet" href="./assets/css/mystyle.css">
+
     <!-- template styles -->
     {$headCss}
 

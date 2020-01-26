@@ -36,6 +36,7 @@
 					if($_POST)
 					{
 							$_city['cat_name'] 		        = 	sanitize($_POST["cat_name"]);
+							$_city['description'] 		        = 	sanitize($_POST["description"]);
 
 							if ($_city[cat_name] =="" )
 							{
@@ -53,6 +54,43 @@
 							}
 
 
+					 if($_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+						{
+							if(!empty($_FILES['img']['error']))
+							{
+								switch($_FILES['img']['error'])
+								{
+									case '1':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '2':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '3':
+										$errors[img] = $lang['UP_ERR_FULL_UP'];
+										break;
+									case '4':
+										$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+										break;
+									case '6':
+										$errors[img] = $lang['UP_ERR_TMP_FLDR'];
+										break;
+									case '7':
+										$errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+										break;
+									case '8':
+										$errors[img] = $lang['UP_ERR_UPLODED_STPD'];
+										break;
+									case '999':
+									default:
+										$errors[img] = $lang['UP_ERR_UNKNOWN'];
+								}
+							}elseif(empty($_FILES['img']['tmp_name']) || $_FILES['img']['tmp_name'] == 'none')
+							{
+								$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+							}
+						}
+
 
 							if(is_array($errors))
 							{
@@ -60,6 +98,32 @@
 								$smarty->assign(n,$_city);
 							}else
 							{
+
+							if( $_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+							{
+								include_once("./inc/Classes/upload.class.php");
+
+								$allow_ext = array("jpg","gif","png");
+
+								$upload    = new Upload($allow_ext,false,0,0,5000,$uploadimg,".","",false,'reps_');
+
+								$files[name] 	= addslashes($_FILES["img"]["name"]);
+								$files[type] 	= $_FILES["img"]['type'];
+								$files[size] 	= $_FILES["img"]['size']/1024;
+								$files[tmp] 	= $_FILES["img"]['tmp_name'];
+								$files[ext]		= $upload->GetExt($_FILES["img"]["name"]);
+
+								$upfile	= $upload->Upload_File($files);
+
+								if($upfile)
+								{
+									$_city[img] =  "uploads/". $upfile[ext] . "/" .  $upfile[newname];
+								}else
+								{
+								   $errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+								}
+								@unlink($_FILES['image']);
+							}
 								$add = $category->addNewCategories($_city);
 							if($add == 1)
 							{
@@ -233,6 +297,7 @@
 	        			$_city['id'] 				    = 	$mId;
 	        			$_city['cat_name'] 		        = 	sanitize($_POST["cat_name"]);
 	        			$_city['category'] 		        = 	sanitize($_POST["category"]);
+$_city['description'] 		        = 	sanitize($_POST["description"]);
 
         				$_city['status'] 			    = 	intval($_POST["status"]);
 
@@ -253,7 +318,42 @@
 							}
 
 
-
+if($_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+						{
+							if(!empty($_FILES['img']['error']))
+							{
+								switch($_FILES['img']['error'])
+								{
+									case '1':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '2':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '3':
+										$errors[img] = $lang['UP_ERR_FULL_UP'];
+										break;
+									case '4':
+										$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+										break;
+									case '6':
+										$errors[img] = $lang['UP_ERR_TMP_FLDR'];
+										break;
+									case '7':
+										$errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+										break;
+									case '8':
+										$errors[img] = $lang['UP_ERR_UPLODED_STPD'];
+										break;
+									case '999':
+									default:
+										$errors[img] = $lang['UP_ERR_UNKNOWN'];
+								}
+							}elseif(empty($_FILES['img']['tmp_name']) || $_FILES['img']['tmp_name'] == 'none')
+							{
+								$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+							}
+						}
 
 
 	                    if(is_array($errors))
@@ -262,7 +362,31 @@
 							$smarty->assign(n,$_city);
 	                    }else
 	                    {
+if( $_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+							{
+								include_once("./inc/Classes/upload.class.php");
 
+								$allow_ext = array("jpg","gif","png");
+
+								$upload    = new Upload($allow_ext,false,0,0,5000,$uploadimg,".","",false,'reps_');
+
+								$files[name] 	= addslashes($_FILES["img"]["name"]);
+								$files[type] 	= $_FILES["img"]['type'];
+								$files[size] 	= $_FILES["img"]['size']/1024;
+								$files[tmp] 	= $_FILES["img"]['tmp_name'];
+								$files[ext]		= $upload->GetExt($_FILES["img"]["name"]);
+
+								$upfile	= $upload->Upload_File($files);
+
+								if($upfile)
+								{
+									$_city[img] =  "uploads/". $upfile[ext] . "/" .  $upfile[newname];
+								}else
+								{
+								   $errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+								}
+								@unlink($_FILES['image']);
+							}
 	                    	$update = $category->setCategoriesInformation($_city);
 							if($update == 1)
 							{
@@ -297,6 +421,43 @@
 					{
 							$_city['parent_id'] 		        = 	sanitize($_POST["category"]);
 							$_city['cat_name'] 		        = 	sanitize($_POST["cat_name"]);
+$_city['description'] 		        = 	sanitize($_POST["description"]);
+if($_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+						{
+							if(!empty($_FILES['img']['error']))
+							{
+								switch($_FILES['img']['error'])
+								{
+									case '1':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '2':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '3':
+										$errors[img] = $lang['UP_ERR_FULL_UP'];
+										break;
+									case '4':
+										$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+										break;
+									case '6':
+										$errors[img] = $lang['UP_ERR_TMP_FLDR'];
+										break;
+									case '7':
+										$errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+										break;
+									case '8':
+										$errors[img] = $lang['UP_ERR_UPLODED_STPD'];
+										break;
+									case '999':
+									default:
+										$errors[img] = $lang['UP_ERR_UNKNOWN'];
+								}
+							}elseif(empty($_FILES['img']['tmp_name']) || $_FILES['img']['tmp_name'] == 'none')
+							{
+								$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+							}
+						}
 
 
 							if ($_city[cat_name] =="" )
@@ -321,6 +482,31 @@
 								$smarty->assign(n,$_city);
 							}else
 							{
+                                if( $_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+							{
+								include_once("./inc/Classes/upload.class.php");
+
+								$allow_ext = array("jpg","gif","png");
+
+								$upload    = new Upload($allow_ext,false,0,0,5000,$uploadimg,".","",false,'reps_');
+
+								$files[name] 	= addslashes($_FILES["img"]["name"]);
+								$files[type] 	= $_FILES["img"]['type'];
+								$files[size] 	= $_FILES["img"]['size']/1024;
+								$files[tmp] 	= $_FILES["img"]['tmp_name'];
+								$files[ext]		= $upload->GetExt($_FILES["img"]["name"]);
+
+								$upfile	= $upload->Upload_File($files);
+
+								if($upfile)
+								{
+									$_city[img] =  "uploads/". $upfile[ext] . "/" .  $upfile[newname];
+								}else
+								{
+								   $errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+								}
+								@unlink($_FILES['image']);
+							}
 								$add = $category->addNewCategories_1($_city);
 							if($add == 1)
 							{

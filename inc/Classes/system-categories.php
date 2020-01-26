@@ -59,6 +59,8 @@ function getsiteCategories_1(){
 					"id"				    => 		$sitecountry['id'],
 					"cat_name"			    => 		$sitecountry['cat_name'],
 					"parent_id"		        => 		$sitecountry['parent_id'],
+					"description"		        => 		$sitecountry['description'],
+					"img"		        => 		$sitecountry['img'],
 					"status"			    => 		$sitecountry['status']
 				);
 			}else{return null;}
@@ -79,6 +81,8 @@ function getsiteCategories_1(){
 		$GLOBALS['db']->query("UPDATE LOW_PRIORITY `".$this->tableName."` SET
 			`cat_name`		    =	'".$city[cat_name]."',
 			`parent_id`		    =	null ,
+			`description`		    =	'".$city[description]."',
+			`img`		    =	'".$city[img]."',
 			`status`		    =	'".$city[status]."'
 			WHERE `id` 		    = 	'".$city[id]."' LIMIT 1 ");
 
@@ -87,6 +91,8 @@ function getsiteCategories_1(){
             $GLOBALS['db']->query("UPDATE LOW_PRIORITY `".$this->tableName."` SET
 			`cat_name`		    =	'".$city[cat_name]."',
 			`parent_id`		    =	'".$city[category]."',
+			`description`		    =	'".$city[description]."',
+			`img`		    =	'".$city[img]."',
 			`status`		    =	'".$city[status]."'
 			WHERE `id` 		    = 	'".$city[id]."' LIMIT 1 ");
 
@@ -116,8 +122,8 @@ function getsiteCategories_1(){
 	{
 
 		$sql=$GLOBALS['db']->query("INSERT LOW_PRIORITY INTO `".$this->tableName."`
-		(`id`, `cat_name`, `parent_id`, `status`)VALUES
-		( NULL ,  '".$city[cat_name]."',NULL ,'1') ");
+		(`id`, `cat_name`, `parent_id`, `description`, `img`, `status`)VALUES
+		( NULL ,  '".$city[cat_name]."',NULL ,'".$city[description]."','".$city[img]."','1') ");
 
 		return 1;
 	}
@@ -125,8 +131,8 @@ function getsiteCategories_1(){
 	{
 
 		$sql=$GLOBALS['db']->query("INSERT LOW_PRIORITY INTO `".$this->tableName."`
-		(`id`, `cat_name`, `parent_id`, `status`)VALUES
-		( NULL ,  '".$city[cat_name]."' ,'".$city[parent_id]."','1') ");
+		(`id`, `cat_name`, `parent_id`, `description`, `img`, `status`)VALUES
+		( NULL ,  '".$city[cat_name]."' ,'".$city[parent_id]."','".$city[description]."','".$city[img]."','1') ");
 
 		return 1;
 	}

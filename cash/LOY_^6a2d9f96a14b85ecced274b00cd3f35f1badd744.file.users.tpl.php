@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-21 15:49:55
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 11:26:32
          compiled from "./assets/themes\internal/users.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:835e26e9e860fcb1-04811737%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:252485e2d5b480f77b7-29000579%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     '6a2d9f96a14b85ecced274b00cd3f35f1badd744' =>
     array (
       0 => './assets/themes\\internal/users.tpl',
-      1 => 1579609408,
+      1 => 1580030781,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '835e26e9e860fcb1-04811737',
+  'nocache_hash' => '252485e2d5b480f77b7-29000579',
   'function' =>
   array (
   ),
@@ -60,17 +60,17 @@ $_smarty_tpl->decodeProperties(array (
 </th>
 											<th><?php echo $_smarty_tpl->getVariable('lang')->value['email'];?>
 </th>
-											<th><?php echo $_smarty_tpl->getVariable('lang')->value['email_verified'];?>
- </th>
 											<th><?php echo $_smarty_tpl->getVariable('lang')->value['mobile'];?>
- </th>
-											<th><?php echo $_smarty_tpl->getVariable('lang')->value['mobile_verified'];?>
  </th>
 											<th><?php echo $_smarty_tpl->getVariable('lang')->value['city'];?>
  </th>
 											<th><?php echo $_smarty_tpl->getVariable('lang')->value['address'];?>
  </th>
+											<th><?php echo $_smarty_tpl->getVariable('lang')->value['type'];?>
+ </th>
 											<th><?php echo $_smarty_tpl->getVariable('lang')->value['volunteer'];?>
+ </th>
+											<th><?php echo $_smarty_tpl->getVariable('lang')->value['status'];?>
  </th>
 											<?php if ($_smarty_tpl->getVariable('group')->value['governorates_edit']=="1"||$_smarty_tpl->getVariable('group')->value['governorates_delete']=="1"||$_smarty_tpl->getVariable('group')->value['cities_list']=="1"){?>
 												<th><?php echo $_smarty_tpl->getVariable('lang')->value['settings'];?>
@@ -95,38 +95,28 @@ if ($_smarty_tpl->_count($_from) > 0){
 												</td>
                                                 <td><?php echo $_smarty_tpl->getVariable('c')->value['email'];?>
 </td>
-												<td>
-													<?php if ($_smarty_tpl->getVariable('c')->value['email_verified']==1){?>
-													<a class="badge bg-success status_deactive" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
-"  title="<?php echo $_smarty_tpl->getVariable('lang')->value['deactivation'];?>
-"><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
-</a>
-													<?php }else{ ?><a class="badge bg-danger status_active" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
-" title="<?php echo $_smarty_tpl->getVariable('lang')->value['activation'];?>
-"> <?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
- </a>
-													<?php }?>
-												</td>
                                                 <td><?php echo $_smarty_tpl->getVariable('c')->value['mobile'];?>
 </td>
-												<td>
-													<?php if ($_smarty_tpl->getVariable('c')->value['mobile_verified']==1){?>
-													<a class="badge bg-success status_deactive" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
-"  title="<?php echo $_smarty_tpl->getVariable('lang')->value['deactivation'];?>
-"><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
-</a>
-													<?php }else{ ?><a class="badge bg-danger status_active" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
-" title="<?php echo $_smarty_tpl->getVariable('lang')->value['activation'];?>
-"> <?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
- </a>
-													<?php }?>
-												</td>
                                                <td><?php echo $_smarty_tpl->getVariable('c')->value['city'];?>
 </td>
                                                 <td><?php echo $_smarty_tpl->getVariable('c')->value['address'];?>
 </td>
+                                                <td><?php echo $_smarty_tpl->getVariable('c')->value['type'];?>
+</td>
                                                 <td>
 													<?php if ($_smarty_tpl->getVariable('c')->value['volunteer']==1){?>
+													<a class="badge bg-success status_deactive" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
+"  title="<?php echo $_smarty_tpl->getVariable('lang')->value['deactivation'];?>
+"><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
+</a>
+													<?php }else{ ?><a class="badge bg-danger status_active" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
+" title="<?php echo $_smarty_tpl->getVariable('lang')->value['activation'];?>
+"> <?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
+ </a>
+													<?php }?>
+												</td>
+                                                <td>
+													<?php if ($_smarty_tpl->getVariable('c')->value['status']==1){?>
 													<a class="badge bg-success status_deactive" id="<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 "  title="<?php echo $_smarty_tpl->getVariable('lang')->value['deactivation'];?>
 "><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
@@ -312,6 +302,16 @@ if ($_smarty_tpl->_count($_from) > 0){
 							</div>
                             <div class="form-group">
 								<div class="col-sm-10">
+									<input type="text" class="form-control" name="type" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['type'];?>
+" value="<?php if ($_smarty_tpl->getVariable('n')->value){?><?php echo $_smarty_tpl->getVariable('n')->value['type'];?>
+<?php }else{ ?><?php echo $_smarty_tpl->getVariable('u')->value['type'];?>
+<?php }?>">
+								</div>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['type'];?>
+</label>
+							</div>
+                            <div class="form-group">
+								<div class="col-sm-10">
 									<select class="form-control" name="volunteer">
 										<option value="0" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['volunteer']==0){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['volunteer']==0){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
 </option>
@@ -320,6 +320,18 @@ if ($_smarty_tpl->_count($_from) > 0){
 									</select>
 								</div>
 								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['volunteer'];?>
+</label>
+							</div>
+                            <div class="form-group">
+								<div class="col-sm-10">
+									<select class="form-control" name="status">
+										<option value="0" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['volunteer']==0){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['status']==0){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
+</option>
+										<option value="1" <?php if ($_smarty_tpl->getVariable('n')->value){?><?php if ($_smarty_tpl->getVariable('n')->value['volunteer']==1){?>selected="selected"<?php }?><?php }else{ ?><?php if ($_smarty_tpl->getVariable('u')->value['status']==1){?>selected="selected"<?php }?><?php }?>><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
+</option>
+									</select>
+								</div>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['status'];?>
 </label>
 							</div>
 							<div class="form-group">
@@ -415,11 +427,24 @@ if ($_smarty_tpl->_count($_from) > 0){
 								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['address'];?>
  </span>
 							</div>
+                          <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['type'];?>
+ : </strong></span>
+								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['type'];?>
+ </span>
+							</div>
 
 							<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> <?php echo $_smarty_tpl->getVariable('lang')->value['volunteer'];?>
  : </strong></span>
 								<span style="width:80%;display:inline-block;"><?php if ($_smarty_tpl->getVariable('u')->value['volunteer']==0){?><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
+<?php }else{ ?><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
+<?php }?></span>
+							</div>
+                     <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> <?php echo $_smarty_tpl->getVariable('lang')->value['status'];?>
+ : </strong></span>
+								<span style="width:80%;display:inline-block;"><?php if ($_smarty_tpl->getVariable('u')->value['status']==0){?><?php echo $_smarty_tpl->getVariable('lang')->value['deactive'];?>
 <?php }else{ ?><?php echo $_smarty_tpl->getVariable('lang')->value['active'];?>
 <?php }?></span>
 							</div>
@@ -535,6 +560,15 @@ if ($_smarty_tpl->_count($_from) > 0){
 <?php }?>">
 								</div>
 								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['address'];?>
+</label>
+							</div>
+                            <div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="type" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['type'];?>
+" value="<?php if ($_smarty_tpl->getVariable('n')->value){?><?php echo $_smarty_tpl->getVariable('n')->value['type'];?>
+<?php }?>">
+								</div>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['type'];?>
 </label>
 							</div>
 							<div class="form-group">

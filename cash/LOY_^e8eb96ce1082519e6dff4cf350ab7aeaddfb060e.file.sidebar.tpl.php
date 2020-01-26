@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-23 13:52:59
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 14:09:08
          compiled from "./assets/themes\sidebar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:70405e29678690db74-91819968%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:189745e2d81645a5443-98680262%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e8eb96ce1082519e6dff4cf350ab7aeaddfb060e' => 
     array (
       0 => './assets/themes\\sidebar.tpl',
-      1 => 1579775604,
+      1 => 1580040543,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '70405e29678690db74-91819968',
+  'nocache_hash' => '189745e2d81645a5443-98680262',
   'function' => 
   array (
   ),
@@ -33,7 +33,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="country.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="country.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['country'];?>
  </span>
@@ -42,7 +42,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="country.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="country.html?do=add" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_country'];?>
 </span>
                                 </a>
@@ -64,7 +64,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="governorates.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="governorates.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['governorate'];?>
  </span>
@@ -73,7 +73,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="governorates.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="governorates.html?do=add" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_governorate'];?>
 </span>
                                 </a>
@@ -95,7 +95,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="cities.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="cities.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['city'];?>
  </span>
@@ -104,7 +104,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="cities.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="cities.html?do=add" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_city'];?>
 </span>
                                 </a>
@@ -125,7 +125,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="chats.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="chats.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['chats'];?>
  </span>
@@ -148,7 +148,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="complains.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="complains.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['complains'];?>
  </span>
@@ -171,7 +171,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
                         
                             <li>
-                                <a href="users.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="users.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['users'];?>
  </span>
@@ -180,7 +180,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="users.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="users.html?do=add" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_user'];?>
 </span>
                                 </a>
@@ -201,7 +201,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="categories.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="categories.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['categories'];?>
  </span>
@@ -210,7 +210,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="categories.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="categories.html?do=add" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_categories'];?>
 </span>
                                 </a>
@@ -218,7 +218,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="categories.html?do=add_cat" style='background-color: #a3f5ca;'>
+                                <a href="categories.html?do=add_cat" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['add_categories_1'];?>
 </span>
                                 </a>
@@ -239,7 +239,7 @@ $_smarty_tpl->decodeProperties(array (
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="tasks.html?do=list" style='background-color: #a3f5ca;'>
+                                <a href="tasks.html?do=list" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['list'];?>
  <?php echo $_smarty_tpl->getVariable('lang')->value['tasks'];?>
  </span>
@@ -248,7 +248,7 @@ $_smarty_tpl->decodeProperties(array (
                             <?php }?>
                             <?php if ($_smarty_tpl->getVariable('group')->value['staffs_add']==1){?>
                             <li>
-                                <a href="tasks.html?do=add" style='background-color: #a3f5ca;'>
+                                <a href="tasks.html?do=add" style='background-color: #EA6E34;'>
                                     <span><?php echo $_smarty_tpl->getVariable('lang')->value['tasks'];?>
 </span>
                                 </a>

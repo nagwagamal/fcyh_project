@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-22 15:56:15
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 15:28:33
          compiled from "./assets/themes\internal/categories.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:248925e28547fc92066-31529302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:159815e2d9401782961-69164465%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     '66cce76bc3f895da565178cc906a90160a7b4b49' =>
     array (
       0 => './assets/themes\\internal/categories.tpl',
-      1 => 1579701349,
+      1 => 1580044450,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '248925e28547fc92066-31529302',
+  'nocache_hash' => '159815e2d9401782961-69164465',
   'function' =>
   array (
   ),
@@ -60,6 +60,10 @@ $_smarty_tpl->decodeProperties(array (
 </th>
 												<th><?php echo $_smarty_tpl->getVariable('lang')->value['categories_1'];?>
 </th>
+												<th><?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+</th>
+												<th><?php echo $_smarty_tpl->getVariable('lang')->value['image'];?>
+</th>
 												<th> <?php echo $_smarty_tpl->getVariable('lang')->value['status'];?>
  </th>
 												<?php if ($_smarty_tpl->getVariable('group')->value['cities_edit']=="1"||$_smarty_tpl->getVariable('group')->value['cities_delete']=="1"){?>
@@ -87,6 +91,10 @@ if ($_smarty_tpl->_count($_from) > 0){
 														<?php echo getFromTable(array('a'=>$_smarty_tpl->getVariable('c')->value['parent_id'],'b'=>"categories",'c'=>"getCategoriesInformation",'d'=>"cat_name"),$_smarty_tpl);?>
 
 													</td>
+													<td><?php echo $_smarty_tpl->getVariable('c')->value['description'];?>
+</td>
+													<td><?php echo $_smarty_tpl->getVariable('c')->value['img'];?>
+</td>
 													<td>
 														<span <?php if ($_smarty_tpl->getVariable('group')->value['cities_active']==1){?> id="active_<?php echo $_smarty_tpl->getVariable('c')->value['id'];?>
 " class="sta_<?php echo $_smarty_tpl->getVariable('c')->value['status'];?>
@@ -224,6 +232,29 @@ if ($_smarty_tpl->_count($_from) > 0){
 								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['category'];?>
 </label>
 							</div>	                            <?php }?>
+
+
+                       <div class="form-group">
+								<div class="col-sm-10">
+                                <input type="text" class="form-control" name="description" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['no_name_by_english'];?>
+" value="<?php if ($_smarty_tpl->getVariable('n')->value){?><?php echo $_smarty_tpl->getVariable('n')->value['description'];?>
+<?php }else{ ?><?php echo $_smarty_tpl->getVariable('u')->value['description'];?>
+<?php }?>">
+								</div>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+</label>
+							</div>
+                         <div class="form-group">
+					<div class="col-sm-10">
+						<input type="file" class="form-control" name="img" value="">
+						<?php if ($_smarty_tpl->getVariable('u')->value['img']){?><p class="help-block"><a target="_blank" href="<?php echo $_smarty_tpl->getVariable('u')->value['img'];?>
+"><?php echo $_smarty_tpl->getVariable('lang')->value['show_image'];?>
+</a></p><?php }?>
+					</div>
+					<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['image'];?>
+</label>
+				</div>
+
 				<div class="form-group">
 								<div class="col-sm-10">
 									<select class="form-control" name="status">
@@ -304,6 +335,19 @@ if ($_smarty_tpl->_count($_from) > 0){
 								<span style="width:80%;display:inline-block;"><?php echo getFromTable(array('a'=>$_smarty_tpl->getVariable('u')->value['parent_id'],'b'=>"categories",'c'=>"getCategoriesInformation",'d'=>"cat_name"),$_smarty_tpl);?>
  </span>
 							</div>
+                            <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+ : </strong></span>
+								<span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['description'];?>
+</span>
+							</div>
+                  <div class="alert alert-info">
+					<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['image'];?>
+ : </strong></span>
+					<span style="width:80%;display:inline-block;"><a target="_blank" href="<?php echo $_smarty_tpl->getVariable('u')->value['img'];?>
+"><img style="border-radius:5px;" src="<?php echo $_smarty_tpl->getVariable('u')->value['img'];?>
+" width="80" /></a></span>
+				</div>
 							<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['status'];?>
  : </strong></span>
@@ -398,6 +442,22 @@ if ($_smarty_tpl->_count($_from) > 0){
 								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['categories_1'];?>
 </label>
 							</div>
+                             <div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="description" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+" value="<?php echo $_smarty_tpl->getVariable('n')->value['description'];?>
+" >
+								</div>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+</label>
+							</div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" name="img" value="">
+                                </div>
+                                <label class="col-sm-2 control-label"> <?php echo $_smarty_tpl->getVariable('lang')->value['image'];?>
+ </label>
+                            </div>
 
 							<div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default"><?php echo $_smarty_tpl->getVariable('lang')->value['add_categories_1'];?>
@@ -457,8 +517,23 @@ if ($_smarty_tpl->_count($_from) > 0){
 								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['category_name'];?>
 </label>
 							</div>
-
-							<div class="form-group">
+                  <div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="description" placeholder="<?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+" value="<?php echo $_smarty_tpl->getVariable('n')->value['description'];?>
+" >
+								</div>
+								<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('lang')->value['description'];?>
+</label>
+                                      </div>
+                          <div class="form-group">
+                              <div class="col-sm-10">
+                                  <input type="file" class="form-control" name="img" value="">
+                              </div>
+                              <label class="col-sm-2 control-label"> <?php echo $_smarty_tpl->getVariable('lang')->value['image'];?>
+ </label>
+                          </div>
+                                                    <div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default"><?php echo $_smarty_tpl->getVariable('lang')->value['add_categories'];?>
 </button></div>
 							</div>

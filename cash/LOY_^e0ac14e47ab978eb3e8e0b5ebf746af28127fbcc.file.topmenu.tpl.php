@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-16 17:58:32
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 13:32:21
          compiled from "./assets/themes\topmenu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:56495e208828b5fee7-65634524%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:171745e2d78c5bed7c5-27317014%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e0ac14e47ab978eb3e8e0b5ebf746af28127fbcc' => 
     array (
       0 => './assets/themes\\topmenu.tpl',
-      1 => 1573723438,
+      1 => 1580038338,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '56495e208828b5fee7-65634524',
+  'nocache_hash' => '171745e2d78c5bed7c5-27317014',
   'function' => 
   array (
   ),
@@ -25,7 +25,7 @@ $_smarty_tpl->decodeProperties(array (
  
                 <!-- logo -->
                 <a href="index.html" style="margin:auto;display:block;text-align:center;">
-                    <img src="./assets/img/dawaa.svg" alt="Dawaa" style="width: 200px;height: 45px;margin-top:1px">
+                    <img src="./assets/img/fcyh.png" alt="Dawaa" style="width: 150px;height: 45px;margin-top:1px">
                 </a>
                 <!-- /logo -->
             </div>

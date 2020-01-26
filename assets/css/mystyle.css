@@ -1,0 +1,11 @@
+.app > .header {
+  background-color: #EA6E34;
+}
+.app > .header .brand{
+      background-color: #EA6E34;
+
+}
+.sidebar a,
+.sidebar .nav-title {
+  color: #5A3C7F;
+}

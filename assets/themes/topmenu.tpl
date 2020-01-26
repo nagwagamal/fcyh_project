@@ -5,7 +5,7 @@
  
                 <!-- logo -->
                 <a href="index.html" style="margin:auto;display:block;text-align:center;">
-                    <img src="./assets/img/dawaa.svg" alt="Dawaa" style="width: 200px;height: 45px;margin-top:1px">
+                    <img src="./assets/img/fcyh.png" alt="Dawaa" style="width: 150px;height: 45px;margin-top:1px">
                 </a>
                 <!-- /logo -->
             </div>

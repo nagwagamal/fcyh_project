@@ -150,6 +150,8 @@
         				$_user['lat'] 		                    = 	sanitize($_POST["lat"]);
         				$_user['address'] 		                    = 	sanitize($_POST["address"]);
         				$_user['volunteer'] 		                    = 	sanitize($_POST["volunteer"]);
+                       $_user['status'] 		                    = 	sanitize($_POST["status"]);
+                           $_user['type'] 		                    = 	sanitize($_POST["type"]);
 
 
 	        			if ($_user[name] =="" )
@@ -208,15 +210,16 @@
 	        			$_user['name'] 		                    = 	sanitize($_POST["name"]);
         				$_user['email'] 		                    = 	sanitize($_POST["email"]);
         				$_user['email_key'] 		                    = 	sanitize($_POST["email_key"]);
-        				$_user['email_verified'] 		                    = 	sanitize($_POST["email_verified"]);
+
         				$_user['mobile'] 		                    = 	sanitize($_POST["mobile"]);
         				$_user['mobile_key'] 		                    = 	sanitize($_POST["mobile_key"]);
-        				$_user['mobile_verified'] 		                    = 	sanitize($_POST["mobile_verified"]);
+
         				$_user['city_id'] 		                    = 	sanitize($_POST["city_id"]);
         				$_user['lon'] 		                    = 	sanitize($_POST["lon"]);
         				$_user['lat'] 		                    = 	sanitize($_POST["lat"]);
         				$_user['address'] 		                    = 	sanitize($_POST["address"]);
-        				$_user['volunteer'] 		                    = 	sanitize($_POST["volunteer"]);
+
+        				$_user['type'] 		                    = 	sanitize($_POST["type"]);
 
 
 	        			if ($_user[name] =="" )

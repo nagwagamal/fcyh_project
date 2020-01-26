@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-16 17:58:32
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 12:48:54
          compiled from "./assets/themes\headinc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:302645e2088289fa182-08723594%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:282495e2d6e9600f0f3-30976505%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '28d2e39e0d1642f636b9277bb4d4c6541b9a39df' => 
     array (
       0 => './assets/themes\\headinc.tpl',
-      1 => 1579002753,
+      1 => 1580035484,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '302645e2088289fa182-08723594',
+  'nocache_hash' => '282495e2d6e9600f0f3-30976505',
   'function' => 
   array (
   ),
@@ -37,6 +37,8 @@ $_smarty_tpl->decodeProperties(array (
     <link rel="stylesheet" href="./assets/css/main_<?php echo $_smarty_tpl->getVariable('lang')->value['DEFAULT'];?>
 .css">
     <link rel="stylesheet" href="./assets/dist/summernote-bs4.css">
+    <link rel="stylesheet" href="./assets/css/mystyle.css">
+
     <!-- template styles -->
     <?php echo $_smarty_tpl->getVariable('headCss')->value;?>
 

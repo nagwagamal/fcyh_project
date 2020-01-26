@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-23 17:01:56
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 10:25:00
          compiled from "./assets/themes\internal/tasks.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:283655e29b564c2f103-20479656%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'a41dee31151d42684860863a98b4908b2cde62d4' =>
     array (
       0 => './assets/themes\\internal/tasks.tpl',
-      1 => 1579791701,
+      1 => 1579791735,
       2 => 'file',
     ),
   ),

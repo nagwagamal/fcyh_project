@@ -28,6 +28,8 @@
 												<th>#</th>
 												<th>{$lang.category}</th>
 												<th>{$lang.categories_1}</th>
+												<th>{$lang.description}</th>
+												<th>{$lang.image}</th>
 												<th> {$lang.status} </th>
 												{if $group.cities_edit eq "1" || $group.cities_delete eq "1"  }
 												<th>{$lang.settings}</th>
@@ -44,6 +46,8 @@
 													<td>
 														{getFromTable a=$c.parent_id b="categories" c="getCategoriesInformation" d="cat_name"}
 													</td>
+													<td>{$c.description}</td>
+													<td>{$c.img}</td>
 													<td>
 														<span {if $group.cities_active eq 1 } id="active_{$c.id}" class="sta_{$c.status} {/if}">
 														{if $c.status eq 1}
@@ -138,6 +142,22 @@
 								</div>
 								<label class="col-sm-2 control-label">{$lang.category}</label>
 							</div>	                            {/if}
+
+
+                       <div class="form-group">
+								<div class="col-sm-10">
+                                <input type="text" class="form-control" name="description" placeholder="{$lang.no_name_by_english}" value="{if $n}{$n.description}{else}{$u.description}{/if}">
+								</div>
+								<label class="col-sm-2 control-label">{$lang.description}</label>
+							</div>
+                         <div class="form-group">
+					<div class="col-sm-10">
+						<input type="file" class="form-control" name="img" value="">
+						{if $u.img}<p class="help-block"><a target="_blank" href="{$u.img}">{$lang.show_image}</a></p>{/if}
+					</div>
+					<label class="col-sm-2 control-label">{$lang.image}</label>
+				</div>
+
 				<div class="form-group">
 								<div class="col-sm-10">
 									<select class="form-control" name="status">
@@ -195,6 +215,14 @@
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.categories_1} : </strong></span>
 								<span style="width:80%;display:inline-block;">{getFromTable a=$u.parent_id b="categories" c="getCategoriesInformation" d="cat_name"} </span>
 							</div>
+                            <div class="alert alert-info">
+								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.description} : </strong></span>
+								<span style="width:80%;display:inline-block;">{$u.description}</span>
+							</div>
+                  <div class="alert alert-info">
+					<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.image} : </strong></span>
+					<span style="width:80%;display:inline-block;"><a target="_blank" href="{$u.img}"><img style="border-radius:5px;" src="{$u.img}" width="80" /></a></span>
+				</div>
 							<div class="alert alert-info">
 								<span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.status} : </strong></span>
 								<span style="width:80%;display:inline-block;">{if $u.status eq 0}{$lang.deactive}{else}{$lang.active}{/if}</span>
@@ -257,6 +285,18 @@
 								</div>
 								<label class="col-sm-2 control-label">{$lang.categories_1}</label>
 							</div>
+                             <div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="description" placeholder="{$lang.description}" value="{$n.description}" >
+								</div>
+								<label class="col-sm-2 control-label">{$lang.description}</label>
+							</div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" name="img" value="">
+                                </div>
+                                <label class="col-sm-2 control-label"> {$lang.image} </label>
+                            </div>
 
 							<div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default">{$lang.add_categories_1}</button></div>
@@ -301,8 +341,19 @@
 								</div>
 								<label class="col-sm-2 control-label">{$lang.category_name}</label>
 							</div>
-
-							<div class="form-group">
+                  <div class="form-group">
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="description" placeholder="{$lang.description}" value="{$n.description}" >
+								</div>
+								<label class="col-sm-2 control-label">{$lang.description}</label>
+                                      </div>
+                          <div class="form-group">
+                              <div class="col-sm-10">
+                                  <input type="file" class="form-control" name="img" value="">
+                              </div>
+                              <label class="col-sm-2 control-label"> {$lang.image} </label>
+                          </div>
+                                                    <div class="form-group">
 								<div class="col-sm-10"><button type="submit" class="btn btn-default">{$lang.add_categories}</button></div>
 							</div>
 						</form>
