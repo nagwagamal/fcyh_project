@@ -63,11 +63,9 @@
 															{/if}
 															{if $group.cities_delete eq 1 }
 
-                                                            {if $c.parent_id  neq null}
 
 																<button class="btn btn-danger btn-xs delete" title="{$lang.delete}"><i class="fa fa-trash-o"></i></button>
 
-															{/if}
 															{/if}
 														</td>
 													{/if}
@@ -150,7 +148,7 @@
 								</div>
 								<label class="col-sm-2 control-label">{$lang.description}</label>
 							</div>
-                         <div class="form-group">
+                <div class="form-group">
 					<div class="col-sm-10">
 						<input type="file" class="form-control" name="img" value="">
 						{if $u.img}<p class="help-block"><a target="_blank" href="{$u.img}">{$lang.show_image}</a></p>{/if}

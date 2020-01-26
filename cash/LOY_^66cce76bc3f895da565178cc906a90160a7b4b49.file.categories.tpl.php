@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 15:28:33
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 16:12:49
          compiled from "./assets/themes\internal/categories.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:159815e2d9401782961-69164465%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:324195e2d9e61442e51-52803389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     '66cce76bc3f895da565178cc906a90160a7b4b49' =>
     array (
       0 => './assets/themes\\internal/categories.tpl',
-      1 => 1580044450,
+      1 => 1580047960,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '159815e2d9401782961-69164465',
+  'nocache_hash' => '324195e2d9e61442e51-52803389',
   'function' =>
   array (
   ),
@@ -120,12 +120,10 @@ if ($_smarty_tpl->_count($_from) > 0){
 															<?php }?>
 															<?php if ($_smarty_tpl->getVariable('group')->value['cities_delete']==1){?>
 
-                                                            <?php if ($_smarty_tpl->getVariable('c')->value['parent_id']!=null){?>
 
 																<button class="btn btn-danger btn-xs delete" title="<?php echo $_smarty_tpl->getVariable('lang')->value['delete'];?>
 "><i class="fa fa-trash-o"></i></button>
 
-															<?php }?>
 															<?php }?>
 														</td>
 													<?php }?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 12:48:54
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 16:12:48
          compiled from "./assets/themes\headinc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:282495e2d6e9600f0f3-30976505%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '28d2e39e0d1642f636b9277bb4d4c6541b9a39df' => 
     array (
       0 => './assets/themes\\headinc.tpl',
-      1 => 1580035484,
+      1 => 1580047427,
       2 => 'file',
     ),
   ),

@@ -100,7 +100,6 @@ break;
 	        			$_task['title'] 		                    = 	sanitize($_POST["title"]);
         				$_task['cat_id'] 		                    = 	sanitize($_POST["category"]);
         				$_task['description'] 		                    = 	sanitize($_POST["description"]);
-        				$_task['img'] 		                    = 	sanitize($_POST["img"]);
         				$_task['lon'] 		                    = 	sanitize($_POST["lon"]);
         				$_task['lat'] 		                    = 	sanitize($_POST["lat"]);
         				$_task['assiged_to'] 		                    = 	sanitize($_POST["assigned"]);
@@ -110,7 +109,42 @@ break;
         				$_task['total_time'] 		                    = 	sanitize($_POST["total_time"]);
         				$_task['review'] 		                    = 	sanitize($_POST["review"]);
 
-
+if($_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+						{
+							if(!empty($_FILES['img']['error']))
+							{
+								switch($_FILES['img']['error'])
+								{
+									case '1':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '2':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '3':
+										$errors[img] = $lang['UP_ERR_FULL_UP'];
+										break;
+									case '4':
+										$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+										break;
+									case '6':
+										$errors[img] = $lang['UP_ERR_TMP_FLDR'];
+										break;
+									case '7':
+										$errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+										break;
+									case '8':
+										$errors[img] = $lang['UP_ERR_UPLODED_STPD'];
+										break;
+									case '999':
+									default:
+										$errors[img] = $lang['UP_ERR_UNKNOWN'];
+								}
+							}elseif(empty($_FILES['img']['tmp_name']) || $_FILES['img']['tmp_name'] == 'none')
+							{
+								$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+							}
+						}
 	        			if ($_task[tittle]  =="" )
 	        			{
 	        				$_task[tittle] = $lang['no_name'];
@@ -121,6 +155,31 @@ break;
 							$smarty->assign(n,$_task);
 						}else
 						{
+                             if( $_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+							{
+								include_once("./inc/Classes/upload.class.php");
+
+								$allow_ext = array("jpg","gif","png");
+
+								$upload    = new Upload($allow_ext,false,0,0,5000,$uploadimg,".","",false,'reps_');
+
+								$files[name] 	= addslashes($_FILES["img"]["name"]);
+								$files[type] 	= $_FILES["img"]['type'];
+								$files[size] 	= $_FILES["img"]['size']/1024;
+								$files[tmp] 	= $_FILES["img"]['tmp_name'];
+								$files[ext]		= $upload->GetExt($_FILES["img"]["name"]);
+
+								$upfile	= $upload->Upload_File($files);
+
+								if($upfile)
+								{
+									$_task[img] =  "uploads/". $upfile[ext] . "/" .  $upfile[newname];
+								}else
+								{
+								   $errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+								}
+								@unlink($_FILES['image']);
+							}
 							$add = $tasks->addNewTasks($_task);
 /*
                     		header( 'Location:country.html' );
@@ -173,7 +232,6 @@ break;
 	        			$_task['title'] 		                    = 	sanitize($_POST["tittle"]);
         				$_task['cat_id'] 		                    = 	sanitize($_POST["category"]);
         				$_task['description'] 		                    = 	sanitize($_POST["description"]);
-        				$_task['img'] 		                    = 	sanitize($_POST["img"]);
         				$_task['lon'] 		                    = 	sanitize($_POST["lon"]);
         				$_task['lat'] 		                    = 	sanitize($_POST["lat"]);
         				$_task['assiged_to'] 		                    = 	sanitize($_POST["assiged_to"]);
@@ -182,6 +240,43 @@ break;
         				$_task['arrived_time'] 		                    = 	sanitize($_POST["arrived_time"]);
         				$_task['total_time'] 		                    = 	sanitize($_POST["total_time"]);
         				$_task['review'] 		                    = 	sanitize($_POST["review"]);
+if($_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+						{
+							if(!empty($_FILES['img']['error']))
+							{
+								switch($_FILES['img']['error'])
+								{
+									case '1':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '2':
+										$errors[img] = $lang['UP_ERR_SIZE_BIG'];
+										break;
+									case '3':
+										$errors[img] = $lang['UP_ERR_FULL_UP'];
+										break;
+									case '4':
+										$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+										break;
+									case '6':
+										$errors[img] = $lang['UP_ERR_TMP_FLDR'];
+										break;
+									case '7':
+										$errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+										break;
+									case '8':
+										$errors[img] = $lang['UP_ERR_UPLODED_STPD'];
+										break;
+									case '999':
+									default:
+										$errors[img] = $lang['UP_ERR_UNKNOWN'];
+								}
+							}elseif(empty($_FILES['img']['tmp_name']) || $_FILES['img']['tmp_name'] == 'none')
+							{
+								$errors[img] = $lang['UP_ERR_SLCT_FILE'];
+							}
+						}
+
 
 
 	        			if ($_task[tittle]  =="" )
@@ -195,7 +290,32 @@ break;
 	                    	$smarty->assign(errors,$errors);
 							$smarty->assign(n,$_task);
 	                    }else
-	                    {
+	                    {if( $_FILES && ( $_FILES['img']['name'] != "") && ( $_FILES['img']['tmp_name'] != "" ) )
+							{
+								include_once("./inc/Classes/upload.class.php");
+
+								$allow_ext = array("jpg","gif","png");
+
+								$upload    = new Upload($allow_ext,false,0,0,5000,$uploadimg,".","",false,'reps_');
+
+								$files[name] 	= addslashes($_FILES["img"]["name"]);
+								$files[type] 	= $_FILES["img"]['type'];
+								$files[size] 	= $_FILES["img"]['size']/1024;
+								$files[tmp] 	= $_FILES["img"]['tmp_name'];
+								$files[ext]		= $upload->GetExt($_FILES["img"]["name"]);
+
+								$upfile	= $upload->Upload_File($files);
+
+								if($upfile)
+								{
+									$_task[img] =  "uploads/". $upfile[ext] . "/" .  $upfile[newname];
+								}else
+								{
+								   $errors[img] = $lang['UP_ERR_NOT_UPLODED'];
+								}
+								@unlink($_FILES['image']);
+							}
+
 	                    	$update = $tasks->setTasksInformation($_task);
 							if($update == 1)
 							{
