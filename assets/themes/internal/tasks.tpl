@@ -247,15 +247,11 @@
                                 <span style="width:15%;display:inline-block;vertical-align:top;"><strong> {$lang.user_task_name} : </strong></span>
                                 <span style="width:80%;display:inline-block;">{getFromTable a=$u.user_id b="users" c="getUsersInformation" d="name"} </span>
                             </div>
-                            <div class="alert alert-info">
-                                <span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.img} : </strong></span>
-                                <span style="width:80%;display:inline-block;">{$u.img} </span>
-                            </div>
+
                             <div class="alert alert-info">
                                 <span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.lon} : </strong></span>
                                 <span style="width:80%;display:inline-block;">{$u.lon} </span>
                             </div>
-
 
                             <div class="alert alert-info">
                                 <span style="width:15%;display:inline-block;vertical-align:top;"><strong>{$lang.lat} : </strong></span>

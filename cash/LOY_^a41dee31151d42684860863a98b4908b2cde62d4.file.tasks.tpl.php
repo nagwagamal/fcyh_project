@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 16:23:23
+<?php /* Smarty version Smarty-3.0.8, created on 2020-01-26 16:32:20
          compiled from "./assets/themes\internal/tasks.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:253435e2d9f5706ccd5-61914705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19145e2da2f49fbaf0-93534950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' =>
   array (
     'a41dee31151d42684860863a98b4908b2cde62d4' =>
     array (
       0 => './assets/themes\\internal/tasks.tpl',
-      1 => 1580048574,
+      1 => 1580049137,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '253435e2d9f5706ccd5-61914705',
+  'nocache_hash' => '19145e2da2f49fbaf0-93534950',
   'function' =>
   array (
   ),
@@ -383,19 +383,13 @@ if ($_smarty_tpl->_count($_from) > 0){
                                 <span style="width:80%;display:inline-block;"><?php echo getFromTable(array('a'=>$_smarty_tpl->getVariable('u')->value['user_id'],'b'=>"users",'c'=>"getUsersInformation",'d'=>"name"),$_smarty_tpl);?>
  </span>
                             </div>
-                            <div class="alert alert-info">
-                                <span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['img'];?>
- : </strong></span>
-                                <span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['img'];?>
- </span>
-                            </div>
+
                             <div class="alert alert-info">
                                 <span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['lon'];?>
  : </strong></span>
                                 <span style="width:80%;display:inline-block;"><?php echo $_smarty_tpl->getVariable('u')->value['lon'];?>
  </span>
                             </div>
-
 
                             <div class="alert alert-info">
                                 <span style="width:15%;display:inline-block;vertical-align:top;"><strong><?php echo $_smarty_tpl->getVariable('lang')->value['lat'];?>
